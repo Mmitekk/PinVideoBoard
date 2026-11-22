@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T11:50:55.656Z",
+  "updatedAt": "2026-11-22T11:55:51.145Z",
   "boards": [
     {
       "id": "b-main",
@@ -23,21 +23,7 @@ window.__PVB_DATA = {
           "color": "#3fb950"
         }
       ],
-      "tiles": [
-        {
-          "id": "tmwrq6skddxch5",
-          "addedAt": "2026-11-22T11:00:18.589Z",
-          "columnId": "c-later",
-          "url": "https://www.youtube.com/watch?v=eT-G2CB_kUA",
-          "provider": "youtube",
-          "vid": "eT-G2CB_kUA",
-          "vk": null,
-          "title": "Делаем траву, которая реагирует на персонажа в Unreal Engine 5",
-          "thumb": "https://i.ytimg.com/vi/eT-G2CB_kUA/hqdefault.jpg",
-          "tags": [],
-          "note": ""
-        }
-      ]
+      "tiles": []
     },
     {
       "id": "bmwrq4rzifivvw",
@@ -220,6 +206,19 @@ window.__PVB_DATA = {
           ],
           "note": "",
           "addedAt": "Mon, 09 Mar 2026 17:01:33 +0000"
+        },
+        {
+          "id": "tmwrq6skddxch5",
+          "addedAt": "2026-11-22T11:00:18.589Z",
+          "columnId": "cmwrq4rzicgzex",
+          "url": "https://www.youtube.com/watch?v=eT-G2CB_kUA",
+          "provider": "youtube",
+          "vid": "eT-G2CB_kUA",
+          "vk": null,
+          "title": "Делаем траву, которая реагирует на персонажа в Unreal Engine 5",
+          "thumb": "https://i.ytimg.com/vi/eT-G2CB_kUA/hqdefault.jpg",
+          "tags": [],
+          "note": ""
         }
       ]
     },
