@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T17:07:45.882Z",
+  "updatedAt": "2026-11-22T17:51:48.133Z",
   "boards": [
     {
       "id": "b-main",
@@ -2811,6 +2811,19 @@ window.__PVB_DATA = {
           ],
           "note": "",
           "addedAt": "2026-11-22T11:27:10.122Z"
+        },
+        {
+          "id": "tmws4vz51oz6i9",
+          "addedAt": "2026-11-22T17:51:48.133Z",
+          "columnId": "cmwrr58y42zaij",
+          "url": "https://youtu.be/bfkbwXVMtn8",
+          "provider": "youtube",
+          "vid": "bfkbwXVMtn8",
+          "vk": null,
+          "title": "Automated Performance Profiling for Local Workflows | Inside Unreal",
+          "thumb": "https://i.ytimg.com/vi/bfkbwXVMtn8/hqdefault.jpg",
+          "tags": [],
+          "note": ""
         }
       ]
     }
