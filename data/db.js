@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T18:11:36.228Z",
+  "updatedAt": "2026-11-22T18:12:53.202Z",
   "boards": [
     {
       "id": "b-main",
@@ -231,6 +231,19 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Делаем траву, которая реагирует на персонажа в Unreal Engine 5",
           "thumb": "https://i.ytimg.com/vi/eT-G2CB_kUA/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        },
+        {
+          "id": "tmws5n39u60cna",
+          "addedAt": "2026-11-22T18:12:53.202Z",
+          "columnId": "cmwrq4rzicgzex",
+          "url": "https://www.youtube.com/watch?v=xmLZGSDNePQ&list=WL&index=50&pp=iAQBsAgC",
+          "provider": "youtube",
+          "vid": "xmLZGSDNePQ",
+          "vk": null,
+          "title": "Создание ГЛАВНОГО МЕНЮ. Часть 4 - Опции игры | Уроки Unreal Engine",
+          "thumb": "https://i.ytimg.com/vi/xmLZGSDNePQ/hqdefault.jpg",
           "tags": [],
           "note": ""
         }
