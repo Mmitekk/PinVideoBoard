@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T16:18:41.281Z",
+  "updatedAt": "2026-11-22T16:43:46.019Z",
   "boards": [
     {
       "id": "b-main",
@@ -595,22 +595,6 @@ window.__PVB_DATA = {
           ],
           "note": "",
           "addedAt": "2026-11-22T11:26:44.099Z"
-        },
-        {
-          "id": "t-pin190699365468730667",
-          "columnId": "cmwrqpaq2as96c",
-          "url": "https://www.youtube.com/watch?v=W4k-64wYHKs",
-          "provider": "youtube",
-          "vid": "W4k-64wYHKs",
-          "vk": null,
-          "title": "Unreal Engine 5 Live Class - Level Design: Caves",
-          "thumb": "https://i.ytimg.com/vi/W4k-64wYHKs/hqdefault.jpg",
-          "duration": 0,
-          "tags": [
-            "pinterest"
-          ],
-          "note": "",
-          "addedAt": "2026-11-22T11:26:44.218Z"
         },
         {
           "id": "t-pin190699365468730698",
