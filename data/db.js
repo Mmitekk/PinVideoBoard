@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T17:53:40.077Z",
+  "updatedAt": "2026-11-22T17:54:50.335Z",
   "boards": [
     {
       "id": "b-main",
@@ -2835,6 +2835,19 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Automated Performance Profiling for Local Workflows | Inside Unreal",
           "thumb": "https://i.ytimg.com/vi/bfkbwXVMtn8/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        },
+        {
+          "id": "tmws4zvq7sgkog",
+          "addedAt": "2026-11-22T17:54:50.335Z",
+          "columnId": "cmwrr58y42zaij",
+          "url": "https://www.youtube.com/watch?v=Oig-vdPd9ak&list=WL&index=62&t=4s&pp=iAQBsAgC",
+          "provider": "youtube",
+          "vid": "Oig-vdPd9ak",
+          "vk": null,
+          "title": "Creating High-Fidelity Digital Humans on a Small Budget w/ MetaHuman | Indie Games Week 2026",
+          "thumb": "https://i.ytimg.com/vi/Oig-vdPd9ak/hqdefault.jpg",
           "tags": [],
           "note": ""
         }
