@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T17:57:36.199Z",
+  "updatedAt": "2026-11-22T17:58:46.756Z",
   "boards": [
     {
       "id": "b-main",
@@ -1907,6 +1907,19 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Niagara Examples Pack - бесплатно - Unreal Engine",
           "thumb": "https://i.ytimg.com/vi/0PU4zGBE2Oo/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        },
+        {
+          "id": "tmws54y5geq09c",
+          "addedAt": "2026-11-22T17:58:46.756Z",
+          "columnId": "cmwrr4xgpj14pf",
+          "url": "https://www.youtube.com/watch?v=RttEGW_8oSg&list=WL&index=60&pp=iAQBsAgC",
+          "provider": "youtube",
+          "vid": "RttEGW_8oSg",
+          "vk": null,
+          "title": "DEVLOG Making a game in Unreal Engine 5 - Adding the Rock Materials",
+          "thumb": "https://i.ytimg.com/vi/RttEGW_8oSg/hqdefault.jpg",
           "tags": [],
           "note": ""
         }
