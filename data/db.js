@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T18:14:11.343Z",
+  "updatedAt": "2026-11-22T18:15:26.842Z",
   "boards": [
     {
       "id": "b-main",
@@ -2991,7 +2991,21 @@ window.__PVB_DATA = {
           "color": "#3fb950"
         }
       ],
-      "tiles": []
+      "tiles": [
+        {
+          "id": "tmws5qdtm91ca0",
+          "addedAt": "2026-11-22T18:15:26.842Z",
+          "columnId": "cmws5orkfqs9cd",
+          "url": "https://www.youtube.com/watch?v=DBPfweu8GaY&list=WL&index=49&pp=iAQBsAgC",
+          "provider": "youtube",
+          "vid": "DBPfweu8GaY",
+          "vk": null,
+          "title": "This AI Chases You... Until You Look At It | UE5 Tutorial",
+          "thumb": "https://i.ytimg.com/vi/DBPfweu8GaY/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        }
+      ]
     }
   ]
 };
