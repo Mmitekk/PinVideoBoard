@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PinVideoBoard — видео-доски</title>
+<meta name="description" content="Витрина видео-досок: канбан и Pinterest-сетка с фильтрами. YouTube, Vimeo, Rutube, VK и прямые файлы.">
+<meta property="og:title" content="PinVideoBoard">
+<meta property="og:description" content="Видео-доски: канбан, Pinterest-сетка, фильтры, модальный плеер.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23111'/%3E%3Cpath d='M13 10.5v11l9-5.5z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css?v=1">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="./">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="8" fill="#111"/>
+        <path d="M13 10.5v11l9-5.5z" fill="#fff"/>
+      </svg>
+      <span class="brand-name">Pin<b>Video</b>Board</span>
+    </a>
+
+    <nav class="tabs" id="tabs" aria-label="Доски"></nav>
+
+    <div class="controls">
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 105.3 14l4.4 4.3 1.4-1.4-4.3-4.4A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/></svg>
+        <input type="search" id="search" placeholder="Поиск по названию/тегам…  ( / )" autocomplete="off" spellcheck="false">
+        <button class="search-clear" id="search-clear" aria-label="Очистить поиск" hidden>&times;</button>
+      </div>
+
+      <div class="seg" id="view-seg" role="group" aria-label="Вид">
+        <button class="icon-btn seg-btn active" id="view-grid" title="Сетка (как Pinterest)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 4h7v7H4zM13 4h7v10h-7zM4 13h7v7H4zM13 16h7v4h-7z"/></svg>
+        </button>
+        <button class="icon-btn seg-btn" id="view-kanban" title="Канбан-доска">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 4h4v12H4zM10 4h4v8h-4zM16 4h4v15h-4z"/></svg>
+        </button>
+      </div>
+
+      <button class="icon-btn" id="refresh-btn" title="Обновить данные с сервера" aria-label="Обновить данные">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 4V1L8 5l4 4V6a6 6 0 015.2 9l1.5 1.3A8 8 0 0012 4zm-5.2 3L5.3 5.7A8 8 0 0012 20v3l4-4-4-4v3a6 6 0 01-5.2-9z"/></svg>
+      </button>
+
+      <button class="add-btn" id="add-btn" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M11 5h2v6h6v2h-6v6h-2v-6H5v-2h6z"/></svg>
+        Добавить видео
+      </button>
+
+      <button class="auth-btn" id="auth-btn">
+        <svg class="auth-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 3a3.2 3.2 0 110 6.4A3.2 3.2 0 0112 5zm0 14a7.5 7.5 0 01-5.7-2.6c.1-2 3.8-3 5.7-3s5.6 1 5.7 3A7.5 7.5 0 0112 19z"/></svg>
+        <span id="auth-label">Войти</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="meta-line">
+    <span id="meta-stats"></span>
+    <div class="meta-filters">
+      <select id="f-provider" title="Провайдер"><option value="">Все провайдеры</option></select>
+      <select id="f-tag" title="Тег"><option value="">Все теги</option></select>
+      <select id="f-sort" title="Сортировка">
+        <option value="new">Сначала новые</option>
+        <option value="old">Сначала старые</option>
+        <option value="title">По названию</option>
+      </select>
+      <button class="ghost-btn" id="f-reset" hidden>Сбросить</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="grid" id="gallery" aria-live="polite"></div>
+  <div class="kanban" id="kanban" hidden></div>
+
+  <div class="empty" id="empty" hidden>
+    <div class="empty-mark">▷</div>
+    <p id="empty-text">Ничего не найдено</p>
+    <button class="ghost-btn" id="empty-reset">Сбросить фильтры</button>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="footer-src">Данные хранятся в этом репозитории (<code>data/db.js</code>). Редактирование — кнопка «Войти».</span>
+    <span class="footer-note">Хостинг — GitHub Pages. Все видео принадлежат их правообладателям.</span>
+  </div>
+</footer>
+
+<!-- модальный плеер -->
+<div class="modal player-modal" id="player-modal" hidden aria-modal="true" role="dialog">
+  <div class="modal-backdrop" data-close></div>
+  <div class="player-body sz-50" id="player-body">
+    <header class="player-top">
+      <span class="player-title" id="player-title"></span>
+      <span class="player-badges" id="player-badges"></span>
+      <div class="player-actions">
+        <a class="ghost-btn player-src" id="player-src-link" href="#" target="_blank" rel="noopener">На хостинге ↗</a>
+        <div class="seg" id="player-sizes">
+          <button class="seg-btn" data-sz="30" title="30% ширины окна">30%</button>
+          <button class="seg-btn" data-sz="50" title="50% ширины окна">50%</button>
+          <button class="seg-btn" data-sz="full" title="На весь экран">⤢</button>
+        </div>
+        <button class="icon-btn" id="player-close" title="Закрыть (Esc)" aria-label="Закрыть">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12 19 6.4 17.6 5 12 10.6z"/></svg>
+        </button>
+      </div>
+    </header>
+    <div class="player-stage" id="player-stage"></div>
+    <button class="player-nav prev" id="player-prev" title="Предыдущее (←)" hidden>‹</button>
+    <button class="player-nav next" id="player-next" title="Следующее (→)" hidden>›</button>
+  </div>
+</div>
+
+<!-- редактор плитки -->
+<div class="modal" id="tile-modal" hidden aria-modal="true" role="dialog">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-body form-body">
+    <header class="modal-top">
+      <h3 id="tile-modal-title">Добавить видео</h3>
+      <button class="icon-btn modal-close" data-close aria-label="Закрыть (Esc)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12 19 6.4 17.6 5 12 10.6z"/></svg>
+      </button>
+    </header>
+    <div class="form-grid">
+      <label class="fld">Ссылка на видео
+        <span class="url-row">
+          <input id="tile-url" type="text" placeholder="https://www.youtube.com/watch?v=…" spellcheck="false">
+          <button class="ghost-btn" id="tile-resolve" type="button">Определить</button>
+        </span>
+      </label>
+      <div class="resolve-status" id="tile-resolve-status" hidden></div>
+      <div class="tile-preview" id="tile-preview" hidden>
+        <img id="tile-preview-img" alt="">
+        <div class="tp-meta">
+          <span class="tp-provider" id="tile-preview-provider"></span>
+          <span class="tp-hint">Превью будет использовано в карточке</span>
+        </div>
+      </div>
+      <label class="fld">Название
+        <input id="tile-title" type="text" placeholder="Определится автоматически, можно править">
+      </label>
+      <div class="two-col">
+        <label class="fld">Доска
+          <select id="tile-board"></select>
+        </label>
+        <label class="fld">Колонка
+          <select id="tile-column"></select>
+        </label>
+      </div>
+      <label class="fld">Теги (через запятую)
+        <input id="tile-tags" type="text" placeholder="рецензия, гайд" spellcheck="false">
+      </label>
+      <label class="fld">Заметка
+        <textarea id="tile-note" rows="2" placeholder="необязательно"></textarea>
+      </label>
+    </div>
+    <footer class="modal-foot">
+      <button class="danger-btn" id="tile-delete" hidden type="button">Удалить</button>
+      <span class="spacer"></span>
+      <button class="ghost-btn" data-close type="button">Отмена</button>
+      <button class="primary-btn" id="tile-save" type="button">Сохранить</button>
+    </footer>
+  </div>
+</div>
+
+<!-- редактор колонки -->
+<div class="modal" id="column-modal" hidden aria-modal="true" role="dialog">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-body form-body narrow">
+    <header class="modal-top">
+      <h3 id="column-modal-title">Колонка</h3>
+      <button class="icon-btn modal-close" data-close aria-label="Закрыть (Esc)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12 19 6.4 17.6 5 12 10.6z"/></svg>
+      </button>
+    </header>
+    <div class="form-grid">
+      <label class="fld">Название колонки
+        <input id="column-name" type="text" placeholder="Например: Смотреть позже">
+      </label>
+      <div class="fld">Цвет колонки
+        <div class="palette" id="column-palette"></div>
+      </div>
+    </div>
+    <footer class="modal-foot">
+      <button class="danger-btn" id="column-delete" hidden type="button">Удалить</button>
+      <span class="spacer"></span>
+      <button class="ghost-btn" data-close type="button">Отмена</button>
+      <button class="primary-btn" id="column-save" type="button">Сохранить</button>
+    </footer>
+  </div>
+</div>
+
+<!-- создание/переименование доски -->
+<div class="modal" id="board-modal" hidden aria-modal="true" role="dialog">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-body form-body narrow">
+    <header class="modal-top">
+      <h3 id="board-modal-title">Новая доска</h3>
+      <button class="icon-btn modal-close" data-close aria-label="Закрыть (Esc)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12 19 6.4 17.6 5 12 10.6z"/></svg>
+      </button>
+    </header>
+    <div class="form-grid">
+      <label class="fld">Название доски (плейлиста)
+        <input id="board-name" type="text" placeholder="Например: Кинематография">
+      </label>
+    </div>
+    <footer class="modal-foot">
+      <button class="danger-btn" id="board-delete" hidden type="button">Удалить доску</button>
+      <span class="spacer"></span>
+      <button class="ghost-btn" data-close type="button">Отмена</button>
+      <button class="primary-btn" id="board-save" type="button">Создать</button>
+    </footer>
+  </div>
+</div>
+
+<!-- вход по токену -->
+<div class="modal" id="login-modal" hidden aria-modal="true" role="dialog">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-body form-body narrow">
+    <header class="modal-top">
+      <h3 id="login-modal-title">Вход владельца</h3>
+      <button class="icon-btn modal-close" data-close aria-label="Закрыть (Esc)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12 19 6.4 17.6 5 12 10.6z"/></svg>
+      </button>
+    </header>
+
+    <div id="login-form">
+      <p class="login-hint">GitHub не разрешает вход «в один клик» со статического сайта (CORS), поэтому используется
+        персональный токен с правом записи в этот репозиторий. Токен хранится только в вашем браузере и отправляется
+        только на <code>api.github.com</code>.</p>
+      <ol class="login-steps">
+        <li>Откройте <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">создание fine-grained токена</a></li>
+        <li>Repository access → <b>Only select repositories</b> → PinVideoBoard</li>
+        <li>Permissions → <b>Contents: Read and write</b></li>
+        <li>Скопируйте токен и вставьте сюда</li>
+      </ol>
+      <label class="fld">Токен
+        <input id="login-token" type="password" placeholder="github_pat_… или ghp_…" spellcheck="false" autocomplete="off">
+      </label>
+      <div class="login-error" id="login-error" hidden></div>
+      <footer class="modal-foot">
+        <span class="spacer"></span>
+        <button class="ghost-btn" data-close type="button">Отмена</button>
+        <button class="primary-btn" id="login-submit" type="button">Войти</button>
+      </footer>
+    </div>
+
+    <div id="login-session" hidden>
+      <p class="login-hint">Вы вошли как <b id="login-user"></b> — права редактирования активны.</p>
+      <footer class="modal-foot">
+        <span class="spacer"></span>
+        <button class="danger-btn" id="logout-btn" type="button">Выйти</button>
+        <button class="ghost-btn" data-close type="button">Закрыть</button>
+      </footer>
+    </div>
+  </div>
+</div>
+
+<!-- подтверждение -->
+<div class="modal" id="confirm-modal" hidden aria-modal="true" role="dialog">
+  <div class="modal-backdrop"></div>
+  <div class="modal-body form-body narrow">
+    <p class="confirm-text" id="confirm-text"></p>
+    <footer class="modal-foot">
+      <span class="spacer"></span>
+      <button class="ghost-btn" id="confirm-no" type="button">Отмена</button>
+      <button class="primary-btn" id="confirm-yes" type="button">Да</button>
+    </footer>
+  </div>
+</div>
+
+<!-- контекстное меню -->
+<div class="menu" id="menu" hidden></div>
+
+<!-- тосты -->
+<div class="toasts" id="toasts"></div>
+
+<script src="js/config.js?v=1"></script>
+<script src="data/db.js?v=1"></script>
+<script src="js/videos.js?v=1"></script>
+<script src="js/api.js?v=1"></script>
+<script src="js/app.js?v=1"></script>
+</body>
+</html>
