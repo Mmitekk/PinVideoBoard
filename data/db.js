@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T11:27:10.533Z",
+  "updatedAt": "2026-11-22T11:50:55.656Z",
   "boards": [
     {
       "id": "b-main",
@@ -2580,22 +2580,6 @@ window.__PVB_DATA = {
           ],
           "note": "",
           "addedAt": "2026-11-22T11:27:08.434Z"
-        },
-        {
-          "id": "t-pin190699365468730372",
-          "columnId": "cmwrr58y42zaij",
-          "url": "https://www.youtube.com/watch?v=QXGRq7a6ZqA",
-          "provider": "youtube",
-          "vid": "QXGRq7a6ZqA",
-          "vk": null,
-          "title": "Anatomy of a MetaHuman Rig | Unreal Fest 2024",
-          "thumb": "https://i.ytimg.com/vi/QXGRq7a6ZqA/hqdefault.jpg",
-          "duration": 0,
-          "tags": [
-            "pinterest"
-          ],
-          "note": "",
-          "addedAt": "2026-11-22T11:27:08.555Z"
         },
         {
           "id": "t-pin190699365468730371",
