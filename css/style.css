@@ -1159,6 +1159,70 @@ body.selecting .kb-card-menu { display: none; }
 
 .select-bar .sel-count { font-weight: 600; font-size: 14px; margin-right: 4px; white-space: nowrap; }
 
+/* ---------- индикатор публикации Pages ---------- */
+
+.deploy-widget {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 95;
+  width: 320px;
+  background: var(--surface-2);
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  padding: 12px 14px;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.5);
+}
+
+.dw-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.dw-title { font-weight: 600; font-size: 13.5px; flex: 1; }
+
+.dw-close {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  color: var(--dim);
+  font-size: 14px;
+  line-height: 1;
+}
+
+.dw-close:hover { color: var(--text); }
+
+.dw-status { font-size: 13px; color: var(--muted); margin-bottom: 8px; }
+
+.dw-bar {
+  height: 4px;
+  border-radius: 3px;
+  background: var(--surface-3);
+  overflow: hidden;
+}
+
+.dw-bar-fill {
+  height: 100%;
+  width: 0;
+  background: var(--text);
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+
+.dw-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--dim);
+}
+
+.dw-meta a { color: var(--muted); }
+
 /* ---------- тосты ---------- */
 
 .toasts {

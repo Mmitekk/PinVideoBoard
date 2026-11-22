@@ -8,7 +8,7 @@
 <meta property="og:title" content="PinVideoBoard">
 <meta property="og:description" content="Видео-доски: канбан, Pinterest-сетка, фильтры, модальный плеер.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23111'/%3E%3Cpath d='M13 10.5v11l9-5.5z' fill='%23fff'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="css/style.css?v=3">
+<link rel="stylesheet" href="css/style.css?v=4">
 </head>
 <body>
 
@@ -292,12 +292,26 @@
   <button class="ghost-btn" id="sel-cancel" type="button">Отмена</button>
 </div>
 
+<!-- индикатор публикации Pages -->
+<div class="deploy-widget" id="deploy-widget" hidden>
+  <div class="dw-head">
+    <span class="dw-title">Публикация на GitHub Pages</span>
+    <button class="dw-close" id="deploy-close" type="button" title="Скрыть">✕</button>
+  </div>
+  <div class="dw-status" id="deploy-status">Коммит отправлен…</div>
+  <div class="dw-bar"><div class="dw-bar-fill" id="deploy-fill"></div></div>
+  <div class="dw-meta">
+    <span id="deploy-elapsed">0 с</span>
+    <a id="deploy-actions" href="https://github.com/Mmitekk/PinVideoBoard/actions" target="_blank" rel="noopener" hidden>Открыть Actions ↗</a>
+  </div>
+</div>
+
 <!-- тосты -->
 <div class="toasts" id="toasts"></div>
 
 <script src="js/config.js?v=1"></script>
 <script src="js/videos.js?v=1"></script>
 <script src="js/api.js?v=1"></script>
-<script src="js/app.js?v=4"></script>
+<script src="js/app.js?v=5"></script>
 </body>
 </html>

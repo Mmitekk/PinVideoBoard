@@ -265,7 +265,7 @@
       }
       if (res && res.noop) return true;
       state.remoteSha = res && res.sha ? res.sha : state.remoteSha;
-      toast('Сохранено — коммит отправлен. GitHub Pages обновится через ~1 мин.');
+      startDeployWatch();
       return true;
     }).catch(function (err) {
       state.persisting = false;
@@ -284,7 +284,7 @@
         GH.overwrite(state.data, conflict.sha, label).then(function (res) {
           state.persisting = false;
           state.remoteSha = res && res.sha ? res.sha : state.remoteSha;
-          toast('Сохранено (перезаписано). Pages обновится через ~1 мин.');
+          startDeployWatch();
         }).catch(function (err) {
           state.persisting = false;
           toast(err.message || 'Ошибка сохранения', 'err');
@@ -618,6 +618,73 @@
     });
     items.push('-', { label: 'Удалить', danger: true, action: function () { deleteTile(tileId); } });
     showMenu(items, x, y);
+  }
+
+  // ---------- индикатор публикации Pages ----------
+
+  // После коммита опрашиваем живой data/db.js (?t= — мимо кэша): как только
+  // origin отдаёт наш updatedAt — Pages собрался и задеплоился.
+  var deployWatch = null;
+
+  function startDeployWatch() {
+    var updatedAt = state.data.updatedAt;
+    if (deployWatch && deployWatch.updatedAt === updatedAt) return; // уже следим за этой версией
+    if (deployWatch) { // пересохранение во время сборки — перенацеливаем на свежий коммит
+      clearInterval(deployWatch.animTimer);
+      clearInterval(deployWatch.pollTimer);
+    }
+    deployWatch = { updatedAt: updatedAt, start: Date.now(), done: false };
+    $('#deploy-widget').hidden = false;
+    $('#deploy-status').textContent = 'Коммит отправлен — Pages собирает…';
+    $('#deploy-actions').hidden = true;
+    $('#deploy-fill').style.width = '6%';
+    $('#deploy-elapsed').textContent = '0 с';
+    deployWatch.animTimer = setInterval(function () {
+      var el = Date.now() - deployWatch.start;
+      // ползём к 95% по экспоненте: 20с ~37%, 45с ~63%, 90с ~86%; 100% только по факту деплоя
+      var pct = Math.min(95, Math.round(100 * (1 - Math.exp(-el / 40000))));
+      $('#deploy-fill').style.width = pct + '%';
+      $('#deploy-elapsed').textContent = Math.round(el / 1000) + ' с';
+      if (!deployWatch.done && el > 240000) {
+        $('#deploy-status').textContent = 'Сборка затянулась — проверьте статус Pages';
+        $('#deploy-actions').hidden = false;
+      }
+    }, 200);
+    deployWatch.pollTimer = setInterval(pollDeploy, 6000);
+    pollDeploy();
+  }
+
+  function pollDeploy() {
+    if (!deployWatch || deployWatch.done) return;
+    fetch(CFG.dataPath + '?t=' + Date.now(), { credentials: 'omit' })
+      .then(function (r) { return r.ok ? r.text() : null; })
+      .then(function (text) {
+        if (!deployWatch || deployWatch.done || !text) return;
+        var remote;
+        try { remote = GH.parseText(text); } catch (e) { return; }
+        if (remote && remote.updatedAt === deployWatch.updatedAt) {
+          deployWatch.done = true;
+          clearInterval(deployWatch.animTimer);
+          clearInterval(deployWatch.pollTimer);
+          var secs = Math.round((Date.now() - deployWatch.start) / 1000);
+          $('#deploy-fill').style.width = '100%';
+          $('#deploy-status').textContent = 'Опубликовано ✓ — изменения на сайте';
+          $('#deploy-elapsed').textContent = 'за ' + secs + ' с';
+          setTimeout(function () {
+            if (deployWatch && deployWatch.done) closeDeployWidget();
+          }, 5000);
+        }
+      })
+      .catch(function () { /* сеть — повторим по таймеру */ });
+  }
+
+  function closeDeployWidget() {
+    if (deployWatch) {
+      clearInterval(deployWatch.animTimer);
+      clearInterval(deployWatch.pollTimer);
+      deployWatch = null;
+    }
+    $('#deploy-widget').hidden = true;
   }
 
   // ---------- массовый выбор ----------
@@ -1521,6 +1588,7 @@
     });
     $('#sel-delete').addEventListener('click', deleteSelectedTiles);
     $('#sel-cancel').addEventListener('click', function () { setSelecting(false); });
+    $('#deploy-close').addEventListener('click', closeDeployWidget);
     $('#color-toggle').addEventListener('click', function () {
       state.color = !state.color;
       try { localStorage.setItem(COLOR_KEY, state.color ? '1' : '0'); } catch (e) { /* ignore */ }
@@ -1671,6 +1739,10 @@
     state.color = localStorage.getItem(COLOR_KEY) === '1';
     applyColorMode();
     updateAuthUi();
+    // отладочный доступ к индикатору публикации — только на localhost (DEV_MODE)
+    if (GH.isLocalDev()) {
+      window.__PVB_DEBUG = { startDeployWatch: startDeployWatch, closeDeployWidget: closeDeployWidget };
+    }
 
     // data/db.js грузим динамически с cache-busting: Pages кэширует до 10 минут,
     // и после коммита статичный тег ?v=1 мог отдать устаревшие данные
