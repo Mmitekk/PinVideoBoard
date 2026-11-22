@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T17:01:55.360Z",
+  "updatedAt": "2026-11-22T17:06:20.164Z",
   "boards": [
     {
       "id": "b-main",
@@ -1854,6 +1854,19 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "UE5: Creating Large Scale Game Assets",
           "thumb": "https://i.ytimg.com/vi/Ol7hXzXUBcI/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        },
+        {
+          "id": "tmws39i83rxt2n",
+          "addedAt": "2026-11-22T17:06:20.163Z",
+          "columnId": "cmwrr4xgpj14pf",
+          "url": "https://www.youtube.com/watch?v=0PU4zGBE2Oo&list=WL&index=67&pp=iAQBsAgC",
+          "provider": "youtube",
+          "vid": "0PU4zGBE2Oo",
+          "vk": null,
+          "title": "Niagara Examples Pack - бесплатно - Unreal Engine",
+          "thumb": "https://i.ytimg.com/vi/0PU4zGBE2Oo/hqdefault.jpg",
           "tags": [],
           "note": ""
         }
