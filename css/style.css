@@ -1095,6 +1095,70 @@ main {
   flex: none;
 }
 
+/* ---------- массовый выбор ---------- */
+
+.card-check,
+.kb-card-check {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  background: rgba(0, 0, 0, 0.6);
+  color: transparent;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+}
+
+.kb-card-check { top: 6px; left: 6px; width: 24px; height: 24px; font-size: 13px; }
+
+body.selecting .card-check,
+body.selecting .kb-card-check { display: flex; }
+
+.card-check.checked,
+.kb-card-check.checked {
+  background: var(--text);
+  border-color: var(--text);
+  color: var(--accent-ink);
+}
+
+body.selecting .card,
+body.selecting .kb-card { cursor: pointer; }
+
+body.selecting .card.selected,
+body.selecting .kb-card.selected {
+  border-color: var(--text);
+  box-shadow: 0 0 0 2px var(--accent-dim);
+}
+
+body.selecting .card-actions,
+body.selecting .kb-card-menu { display: none; }
+
+.select-bar {
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface-2);
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 10px 16px;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.5);
+}
+
+.select-bar .sel-count { font-weight: 600; font-size: 14px; margin-right: 4px; white-space: nowrap; }
+
 /* ---------- тосты ---------- */
 
 .toasts {

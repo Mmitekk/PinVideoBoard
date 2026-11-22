@@ -142,6 +142,8 @@
     user: null,
     persisting: false,
     renderedIds: [],
+    selecting: false,
+    selected: [],
     playerList: [],
     playerIdx: -1,
     resolveMeta: null
@@ -398,6 +400,11 @@
     var style = '';
     if (color) style += '--c:' + esc(color) + ';--c-bg:' + hexToRgba(color, 0.14) + ';';
 
+    var isSelected = state.selecting && state.selected.indexOf(t.id) >= 0;
+    var checkHTML = state.selecting
+      ? '<button class="card-check' + (isSelected ? ' checked' : '') + '" data-check="' + esc(t.id) + '" title="Выбрать">✓</button>'
+      : '';
+
     var thumbs = V.thumbFallbacks(t);
     var thumbHTML;
     if (thumbs.length) {
@@ -430,8 +437,9 @@
         '</span>';
     }
 
-    return '<article class="card" data-id="' + esc(t.id) + '" style="' + style + '">' +
+    return '<article class="card' + (isSelected ? ' selected' : '') + '" data-id="' + esc(t.id) + '" style="' + style + '">' +
       thumbHTML +
+      checkHTML +
       actions +
       '<div class="card-body">' +
       '<h3 class="card-title">' + esc(t.title || 'Без названия') + '</h3>' +
@@ -480,6 +488,7 @@
     }
     var b = findBoard(state.board);
     if (!b) { state.board = 'all'; renderKanban(); return; }
+    state.renderedIds = (b.tiles || []).map(function (t) { return t.id; });
 
     var edit = GH.canEdit();
     var html = '<div class="kb-head">' +
@@ -537,8 +546,10 @@
     var thumbHTML = thumbs.length
       ? '<img class="kb-card-thumb" src="' + esc(thumbs[0]) + '" alt="" loading="lazy" data-fb="' + esc(thumbs.slice(1).join('|')) + '">'
       : '<div class="kb-card-ph">▶</div>';
-    return '<article class="kb-card" data-id="' + esc(t.id) + '"' + (edit ? ' draggable="true"' : '') + '>' +
+    var isSelected = edit && state.selecting && state.selected.indexOf(t.id) >= 0;
+    return '<article class="kb-card' + (isSelected ? ' selected' : '') + '" data-id="' + esc(t.id) + '"' + (edit && !state.selecting ? ' draggable="true"' : '') + '>' +
       thumbHTML +
+      (edit && state.selecting ? '<button class="kb-card-check' + (isSelected ? ' checked' : '') + '" data-check="' + esc(t.id) + '" title="Выбрать">✓</button>' : '') +
       (edit ? '<button class="icon-btn kb-card-menu" data-cardmenu="' + esc(t.id) + '" title="Меню карточки">⋮</button>' : '') +
       '<div class="kb-card-body">' +
       '<h4 class="kb-card-title">' + esc(t.title || 'Без названия') + '</h4>' +
@@ -572,6 +583,17 @@
       showCardMenu(cardMenuBtn.getAttribute('data-cardmenu'), r.left, r.bottom + 4);
       return;
     }
+    var checkBtn = e.target.closest('[data-check]');
+    if (checkBtn) {
+      e.stopPropagation();
+      toggleSelected(checkBtn.getAttribute('data-check'));
+      return;
+    }
+    if (card && state.selecting) {
+      e.stopPropagation();
+      toggleSelected(card.getAttribute('data-id'));
+      return;
+    }
     if (card) {
       openPlayer(card.getAttribute('data-id'));
     }
@@ -596,6 +618,72 @@
     });
     items.push('-', { label: 'Удалить', danger: true, action: function () { deleteTile(tileId); } });
     showMenu(items, x, y);
+  }
+
+  // ---------- массовый выбор ----------
+
+  function setSelecting(on) {
+    state.selecting = on;
+    if (!on) state.selected = [];
+    document.body.classList.toggle('selecting', on);
+    $('#select-bar').hidden = !on;
+    updateSelectBar();
+    renderAll();
+  }
+
+  function updateSelectBar() {
+    $('#sel-count').textContent = 'Выбрано: ' + state.selected.length;
+  }
+
+  function toggleSelected(id) {
+    var i = state.selected.indexOf(id);
+    if (i >= 0) state.selected.splice(i, 1);
+    else state.selected.push(id);
+    updateSelectBar();
+    // обновить карточки точечно, без полного рендера (не дёргаем lazy-превью)
+    var on = state.selected.indexOf(id) >= 0;
+    $all('.card[data-id="' + id + '"], .kb-card[data-id="' + id + '"]').forEach(function (el) {
+      el.classList.toggle('selected', on);
+      var chk = el.querySelector('.card-check, .kb-card-check');
+      if (chk) chk.classList.toggle('checked', on);
+    });
+  }
+
+  function deleteSelectedTiles() {
+    if (!state.selected.length) return;
+    var n = state.selected.length;
+    confirmDialog('Удалить выбранные видео (' + n + ' ' + plural(n, 'шт.', 'шт.', 'шт.') + ')? Одним коммитом — один билд Pages.')
+      .then(function (choice) {
+        if (choice !== 'yes') return;
+        var removed = []; // {board, tile, idx} — для отката
+        state.selected.forEach(function (id) {
+          var found = findTile(id);
+          if (!found) return;
+          var tiles = found.board.tiles || [];
+          var idx = tiles.indexOf(found.tile);
+          if (idx >= 0) { tiles.splice(idx, 1); removed.push({ board: found.board, tile: found.tile, idx: idx }); }
+        });
+        var label = 'массовое удаление: ' + removed.length + ' ' + plural(removed.length, 'видео', 'видео', 'видео');
+        persist(label).then(function (ok) {
+          if (ok) {
+            toast('Удалено ' + removed.length + ' — Pages обновится через ~1 мин');
+            setSelecting(false);
+            renderAll();
+            return;
+          }
+          // откат: вернуть плитки на исходные позиции (по каждой доске — с конца)
+          var byBoard = {};
+          removed.forEach(function (r) { (byBoard[r.board.id] = byBoard[r.board.id] || []).push(r); });
+          Object.keys(byBoard).forEach(function (bid) {
+            byBoard[bid].sort(function (a, b) { return b.idx - a.idx; }).forEach(function (r) {
+              var tiles = r.board.tiles || [];
+              tiles.splice(Math.min(r.idx, tiles.length), 0, r.tile);
+            });
+          });
+          renderAll();
+          toast('Удаление не сохранено — плитки возвращены на место', 'err');
+        });
+      });
   }
 
   function deleteTile(tileId) {
@@ -1307,6 +1395,8 @@
     $('#auth-label').textContent = authed ? state.user : 'Войти';
     var edit = GH.canEdit();
     $('#add-btn').hidden = !edit;
+    $('#select-btn').hidden = !edit;
+    if (!edit && state.selecting) setSelecting(false);
   }
 
   function loadRemoteData() {
@@ -1423,6 +1513,14 @@
 
     // прочие кнопки шапки
     $('#refresh-btn').addEventListener('click', onRefresh);
+    $('#select-btn').addEventListener('click', function () { setSelecting(!state.selecting); });
+    $('#sel-all').addEventListener('click', function () {
+      state.selected = state.renderedIds.slice();
+      updateSelectBar();
+      renderAll();
+    });
+    $('#sel-delete').addEventListener('click', deleteSelectedTiles);
+    $('#sel-cancel').addEventListener('click', function () { setSelecting(false); });
     $('#color-toggle').addEventListener('click', function () {
       state.color = !state.color;
       try { localStorage.setItem(COLOR_KEY, state.color ? '1' : '0'); } catch (e) { /* ignore */ }
@@ -1520,6 +1618,7 @@
         if (!$('#menu').hidden) { closeMenu(); return; }
         var open = $all('.modal').filter(function (m) { return !m.hidden; });
         if (open.length) { closeModal(open[open.length - 1]); return; }
+        if (state.selecting) { setSelecting(false); return; }
       }
       if (e.key === '/' && !playerOpen) {
         var tag = (e.target.tagName || '').toLowerCase();
@@ -1542,8 +1641,16 @@
       onCardAction(actBtn.getAttribute('data-act'), actBtn.getAttribute('data-id'));
       return;
     }
+    var checkBtn = e.target.closest('[data-check]');
+    if (checkBtn) {
+      toggleSelected(checkBtn.getAttribute('data-check'));
+      return;
+    }
     var card = e.target.closest('.card');
-    if (card) openPlayer(card.getAttribute('data-id'));
+    if (card) {
+      if (state.selecting) { toggleSelected(card.getAttribute('data-id')); return; }
+      openPlayer(card.getAttribute('data-id'));
+    }
   }
 
   function onCardAction(act, tileId) {
