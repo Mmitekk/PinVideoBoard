@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T16:43:46.019Z",
+  "updatedAt": "2026-11-22T17:01:55.360Z",
   "boards": [
     {
       "id": "b-main",
@@ -1843,6 +1843,19 @@ window.__PVB_DATA = {
           ],
           "note": "",
           "addedAt": "2026-11-22T11:26:56.322Z"
+        },
+        {
+          "id": "tmws33twgsjugk",
+          "addedAt": "2026-11-22T17:01:55.360Z",
+          "columnId": "cmwrr4xgpj14pf",
+          "url": "https://www.youtube.com/watch?v=Ol7hXzXUBcI&list=WL&index=71&t=2s&pp=iAQBsAgC",
+          "provider": "youtube",
+          "vid": "Ol7hXzXUBcI",
+          "vk": null,
+          "title": "UE5: Creating Large Scale Game Assets",
+          "thumb": "https://i.ytimg.com/vi/Ol7hXzXUBcI/hqdefault.jpg",
+          "tags": [],
+          "note": ""
         }
       ]
     },
