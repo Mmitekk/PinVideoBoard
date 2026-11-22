@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T15:44:35.326Z",
+  "updatedAt": "2026-11-22T15:46:11.248Z",
   "boards": [
     {
       "id": "b-main",
@@ -221,8 +221,8 @@ window.__PVB_DATA = {
           "note": ""
         },
         {
-          "id": "tmws0cdmmkff0n",
-          "addedAt": "2026-11-22T15:44:35.326Z",
+          "id": "tmws0efn3rahik",
+          "addedAt": "2026-11-22T15:46:11.247Z",
           "columnId": "cmwrq4rzicgzex",
           "url": "https://www.youtube.com/watch?v=mNjCDKDiWjs",
           "provider": "youtube",
