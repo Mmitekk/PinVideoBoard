@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T15:46:11.248Z",
+  "updatedAt": "2026-11-22T15:48:17.436Z",
   "boards": [
     {
       "id": "b-main",
@@ -217,19 +217,6 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Делаем траву, которая реагирует на персонажа в Unreal Engine 5",
           "thumb": "https://i.ytimg.com/vi/eT-G2CB_kUA/hqdefault.jpg",
-          "tags": [],
-          "note": ""
-        },
-        {
-          "id": "tmws0efn3rahik",
-          "addedAt": "2026-11-22T15:46:11.247Z",
-          "columnId": "cmwrq4rzicgzex",
-          "url": "https://www.youtube.com/watch?v=mNjCDKDiWjs",
-          "provider": "youtube",
-          "vid": "mNjCDKDiWjs",
-          "vk": null,
-          "title": "🎵 Ambient Music(Deus Ex Divided)",
-          "thumb": "https://i.ytimg.com/vi/mNjCDKDiWjs/hqdefault.jpg",
           "tags": [],
           "note": ""
         }
