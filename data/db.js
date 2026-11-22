@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T18:12:53.202Z",
+  "updatedAt": "2026-11-22T18:14:11.343Z",
   "boards": [
     {
       "id": "b-main",
@@ -2969,6 +2969,29 @@ window.__PVB_DATA = {
           "note": ""
         }
       ]
+    },
+    {
+      "id": "bmws5orkfaxu19",
+      "name": "Tutorial",
+      "createdAt": "2026-11-22T18:14:11.343Z",
+      "columns": [
+        {
+          "id": "cmws5orkfqs9cd",
+          "name": "Смотреть позже",
+          "color": "#4a9eff"
+        },
+        {
+          "id": "cmws5orkf1rmd7",
+          "name": "Смотрю",
+          "color": "#d29922"
+        },
+        {
+          "id": "cmws5orkfrsrc7",
+          "name": "Просмотрено",
+          "color": "#3fb950"
+        }
+      ],
+      "tiles": []
     }
   ]
 };
