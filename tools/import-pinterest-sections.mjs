@@ -272,7 +272,8 @@ for (const item of SECTIONS) {
       duration: duration || 0,
       tags: ['pinterest'],
       note: (p.description || '').trim(),
-      addedAt: p.created || new Date().toISOString(),
+      // время добавления на сайт (не дата пина) — чтобы «Сначала новые» работало ожидаемо
+      addedAt: new Date().toISOString(),
     }]);
     globalUrls.add(canonical);
     existingIds.add(tileId);

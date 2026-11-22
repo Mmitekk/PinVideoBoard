@@ -214,8 +214,10 @@
     });
     list.sort(function (a, b) {
       if (state.sort === 'title') return String(a.tile.title || '').localeCompare(String(b.tile.title || ''), 'ru');
-      var da = a.tile.addedAt || '', db = b.tile.addedAt || '';
-      return state.sort === 'old' ? (da < db ? -1 : da > db ? 1 : 0) : (da > db ? -1 : da < db ? 1 : 0);
+      // числовое сравнение времени (Date.parse) — устойчиво к любым форматам дат
+      var da = Date.parse(a.tile.addedAt || '') || 0;
+      var db2 = Date.parse(b.tile.addedAt || '') || 0;
+      return state.sort === 'old' ? (da - db2) : (db2 - da);
     });
     return list;
   }
@@ -602,9 +604,15 @@
     confirmDialog('Удалить видео «' + (found.tile.title || 'без названия') + '»?')
       .then(function (choice) {
         if (choice !== 'yes') return;
-        found.board.tiles = (found.board.tiles || []).filter(function (x) { return x.id !== tileId; });
+        var tiles = found.board.tiles || [];
+        var idx = tiles.indexOf(found.tile);
+        tiles.splice(idx, 1);
         persist('доска «' + found.board.name + '»: удалено — ' + (found.tile.title || '')).then(function (ok) {
-          if (ok) renderAll();
+          if (ok) { renderAll(); return; }
+          // сохранение не прошло (конликт/сеть) — возвращаем плитку на место
+          if (tiles.indexOf(found.tile) < 0) tiles.splice(Math.min(idx, tiles.length), 0, found.tile);
+          renderAll();
+          toast('Удаление не сохранено — плитка возвращена на место', 'err');
         });
       });
   }
@@ -1122,13 +1130,17 @@
     confirmDialog('Удалить видео «' + (found.tile.title || 'без названия') + '»?')
       .then(function (choice) {
         if (choice !== 'yes') return;
-        found.board.tiles = (found.board.tiles || []).filter(function (x) { return x.id !== editorCtx.tileId; });
+        var tiles = found.board.tiles || [];
+        var idx = tiles.indexOf(found.tile);
+        tiles.splice(idx, 1);
         var label = 'доска «' + found.board.name + '»: удалено — ' + (found.tile.title || '');
         persist(label).then(function (ok) {
-          if (ok) {
-            closeModal($('#tile-modal'));
-            renderAll();
-          }
+          closeModal($('#tile-modal'));
+          if (ok) { renderAll(); return; }
+          // откат при несохранении
+          if (tiles.indexOf(found.tile) < 0) tiles.splice(Math.min(idx, tiles.length), 0, found.tile);
+          renderAll();
+          toast('Удаление не сохранено — плитка возвращена на место', 'err');
         });
       });
   }
@@ -1552,8 +1564,28 @@
     state.color = localStorage.getItem(COLOR_KEY) === '1';
     applyColorMode();
     updateAuthUi();
-    renderAll();
 
+    // data/db.js грузим динамически с cache-busting: Pages кэширует до 10 минут,
+    // и после коммита статичный тег ?v=1 мог отдать устаревшие данные
+    if (window.__PVB_DATA) {
+      bootWithData();
+      return;
+    }
+    var s = document.createElement('script');
+    s.src = CFG.dataPath + '?t=' + Date.now();
+    s.onload = function () {
+      state.data = window.__PVB_DATA || state.data;
+      bootWithData();
+    };
+    s.onerror = function () {
+      $('#meta-stats').textContent = 'Не удалось загрузить данные (data/db.js). Проверьте соединение и обновите страницу.';
+      bootWithData(); // обработчики всё равно вешаем, пустые состояния покажутся сами
+    };
+    document.head.appendChild(s);
+  }
+
+  function bootWithData() {
+    renderAll();
     GH.restoreSession().then(function (u) {
       if (u) {
         state.user = u.login;

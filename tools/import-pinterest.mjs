@@ -235,7 +235,8 @@ for (const p of videoPins) {
     duration: duration || 0,
     tags: ['pinterest'],
     note: (p.description || '').trim(),
-    addedAt: p.created || new Date().toISOString(),
+    // время добавления на сайт (не дата пина) — чтобы «Сначала новые» работало ожидаемо
+    addedAt: new Date().toISOString(),
   };
   tiles.push(tile);
   console.log(`  + ${p.info.provider} «${title.slice(0, 60)}»`);
