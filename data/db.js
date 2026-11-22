@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T16:06:53.902Z",
+  "updatedAt": "2026-11-22T16:08:28.965Z",
   "boards": [
     {
       "id": "b-main",
@@ -223,19 +223,6 @@ window.__PVB_DATA = {
         {
           "id": "tmws13eqku974x",
           "addedAt": "2026-11-22T16:05:36.476Z",
-          "columnId": "cmwrq4rzicgzex",
-          "url": "https://www.youtube.com/watch?v=mNjCDKDiWjs",
-          "provider": "youtube",
-          "vid": "mNjCDKDiWjs",
-          "vk": null,
-          "title": "🎵 Ambient Music(Deus Ex Divided)",
-          "thumb": "https://i.ytimg.com/vi/mNjCDKDiWjs/hqdefault.jpg",
-          "tags": [],
-          "note": ""
-        },
-        {
-          "id": "tmws152haqh5zl",
-          "addedAt": "2026-11-22T16:06:53.902Z",
           "columnId": "cmwrq4rzicgzex",
           "url": "https://www.youtube.com/watch?v=mNjCDKDiWjs",
           "provider": "youtube",
