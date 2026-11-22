@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T18:15:26.842Z",
+  "updatedAt": "2026-11-22T18:16:52.764Z",
   "boards": [
     {
       "id": "b-main",
@@ -3002,6 +3002,19 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "This AI Chases You... Until You Look At It | UE5 Tutorial",
           "thumb": "https://i.ytimg.com/vi/DBPfweu8GaY/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        },
+        {
+          "id": "tmws5s84czld76",
+          "addedAt": "2026-11-22T18:16:52.764Z",
+          "columnId": "cmws5orkfqs9cd",
+          "url": "https://www.youtube.com/watch?v=Lhj2LutYNjA&list=WL&index=47&pp=iAQBsAgC",
+          "provider": "youtube",
+          "vid": "Lhj2LutYNjA",
+          "vk": null,
+          "title": "How to Use Unreal Engine’s New Landscape System - Mesh Terrain Tutorial",
+          "thumb": "https://i.ytimg.com/vi/Lhj2LutYNjA/hqdefault.jpg",
           "tags": [],
           "note": ""
         }
