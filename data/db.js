@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T17:06:20.164Z",
+  "updatedAt": "2026-11-22T17:07:45.882Z",
   "boards": [
     {
       "id": "b-main",
@@ -23,7 +23,21 @@ window.__PVB_DATA = {
           "color": "#3fb950"
         }
       ],
-      "tiles": []
+      "tiles": [
+        {
+          "id": "tmws3bcd6j28pj",
+          "addedAt": "2026-11-22T17:07:45.882Z",
+          "columnId": "c-later",
+          "url": "https://www.youtube.com/watch?v=QvE_EUuGFm4&list=WL&index=66&pp=iAQBsAgC",
+          "provider": "youtube",
+          "vid": "QvE_EUuGFm4",
+          "vk": null,
+          "title": "Foliage Optimization Done Right (UE 5.7)",
+          "thumb": "https://i.ytimg.com/vi/QvE_EUuGFm4/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        }
+      ]
     },
     {
       "id": "bmwrq4rzifivvw",
