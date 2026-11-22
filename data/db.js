@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T21:25:54.632Z",
+  "updatedAt": "2026-11-22T21:28:39.255Z",
   "boards": [
     {
       "id": "b-main",
@@ -1172,6 +1172,19 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "LIVE Unreal Engine Q&A | Blueprints, AI, Multiplayer & Game Development",
           "thumb": "https://i.ytimg.com/vi/WVKL7VhghvM/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        },
+        {
+          "id": "tmwscmul2i1ijb",
+          "addedAt": "2026-11-22T21:28:39.254Z",
+          "columnId": "cmwrqpaq2as96c",
+          "url": "https://www.youtube.com/watch?v=go8HmfKnXZc&list=WL&index=43&pp=iAQBsAgC",
+          "provider": "youtube",
+          "vid": "go8HmfKnXZc",
+          "vk": null,
+          "title": "LIVE Unreal Engine Q&A | Blueprints, AI, Multiplayer & Game Development",
+          "thumb": "https://i.ytimg.com/vi/go8HmfKnXZc/hqdefault.jpg",
           "tags": [],
           "note": ""
         }
