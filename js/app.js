@@ -6,6 +6,7 @@
   var V = window.__PVB_VIDEOS;
   var GH = window.__PVB_API;
   var VIEW_KEY = 'pvb-view';
+  var COLOR_KEY = 'pvb-color';
   var PALETTE = ['#4a9eff', '#3fb950', '#d29922', '#f85149', '#a371f7', '#39c5cf', '#db61a2', '#8b949e'];
   var DEFAULT_COLUMNS = [
     { name: 'Смотреть позже', color: '#4a9eff' },
@@ -42,6 +43,22 @@
     if (!m) return hex;
     var n = parseInt(m[1], 16);
     return 'rgba(' + (n >> 16) + ',' + ((n >> 8) & 255) + ',' + (n & 255) + ',' + a + ')';
+  }
+
+  // монохром: цвет колонки -> оттенок серого по яркости (колонки остаются различимыми)
+  function hexToGray(hex) {
+    var m = /^#?([0-9a-f]{6})$/i.exec(hex || '');
+    if (!m) return hex;
+    var n = parseInt(m[1], 16);
+    var y = Math.round(0.299 * (n >> 16 & 255) + 0.587 * (n >> 8 & 255) + 0.114 * (n & 255));
+    y = Math.max(100, Math.min(200, y));
+    var g = y.toString(16);
+    if (g.length < 2) g = '0' + g;
+    return '#' + g + g + g;
+  }
+
+  function monoColor(hex) {
+    return state.color ? hex : hexToGray(hex);
   }
 
   function toast(msg, type, opts) {
@@ -116,6 +133,7 @@
     data: window.__PVB_DATA || { version: 1, updatedAt: null, boards: [] },
     remoteSha: null,
     view: localStorage.getItem(VIEW_KEY) === 'kanban' ? 'kanban' : 'grid',
+    color: false,
     board: 'all',
     q: '',
     tag: '',
@@ -374,7 +392,7 @@
   function cardHTML(e) {
     var t = e.tile;
     var col = columnOf(e.board, t.columnId);
-    var color = col ? col.color : null;
+    var color = col ? monoColor(col.color) : null;
     var style = '';
     if (color) style += '--c:' + esc(color) + ';--c-bg:' + hexToRgba(color, 0.14) + ';';
 
@@ -493,7 +511,8 @@
 
   function columnHTML(b, c, edit) {
     var tiles = tilesOf(b, c.id);
-    var style = '--c:' + esc(c.color) + ';--c-bg:' + hexToRgba(c.color, 0.14) + ';';
+    var cCol = monoColor(c.color);
+    var style = '--c:' + esc(cCol) + ';--c-bg:' + hexToRgba(cCol, 0.14) + ';';
     var html = '<section class="kb-col" data-col="' + esc(c.id) + '" style="' + style + '">' +
       '<header class="kb-col-head">' +
       '<span class="kb-col-dot"></span>' +
@@ -569,7 +588,7 @@
       if (c.id === found.tile.columnId) return;
       items.push({
         label: '→ ' + c.name,
-        color: c.color,
+        color: monoColor(c.color),
         action: function () { moveTile(tileId, c.id, tilesOf(b, c.id).length); }
       });
     });
@@ -845,7 +864,7 @@
 
     $('#player-title').textContent = t.title || 'Без названия';
     var badges = '<span class="chip chip-provider">' + esc(V.providerLabel(t.provider)) + '</span>';
-    if (col) badges += '<span class="chip chip-column" style="--c:' + esc(col.color) + '">' + esc(col.name) + '</span>';
+    if (col) badges += '<span class="chip chip-column" style="--c:' + esc(monoColor(col.color)) + '">' + esc(col.name) + '</span>';
     badges += '<span class="chip">' + esc(entry.board.name) + '</span>';
     $('#player-badges').innerHTML = badges;
 
@@ -1261,6 +1280,12 @@
     renderAll();
   }
 
+  function applyColorMode() {
+    document.body.classList.toggle('color', state.color);
+    $('#color-toggle').title = state.color ? 'Монохромный вид' : 'Показать цвет';
+    $('#color-toggle').classList.toggle('active', state.color);
+  }
+
   function updateAuthUi() {
     var authed = !!state.user;
     var body = document.body;
@@ -1386,6 +1411,12 @@
 
     // прочие кнопки шапки
     $('#refresh-btn').addEventListener('click', onRefresh);
+    $('#color-toggle').addEventListener('click', function () {
+      state.color = !state.color;
+      try { localStorage.setItem(COLOR_KEY, state.color ? '1' : '0'); } catch (e) { /* ignore */ }
+      applyColorMode();
+      renderAll();
+    });
     $('#add-btn').addEventListener('click', function () { openTileModal(null, null); });
     $('#auth-btn').addEventListener('click', openLoginModal);
 
@@ -1518,6 +1549,8 @@
 
   function boot() {
     bindEvents();
+    state.color = localStorage.getItem(COLOR_KEY) === '1';
+    applyColorMode();
     updateAuthUi();
     renderAll();
 

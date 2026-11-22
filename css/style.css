@@ -10,8 +10,10 @@
   --text: #ececec;
   --muted: #9b9b9b;
   --dim: #6f6f6f;
-  --accent: #4a9eff;
-  --accent-dim: rgba(74, 158, 255, 0.16);
+  /* монохромный акцент: светло-серый вместо синего (как в PinRefBoard) */
+  --accent: #d9d9d9;
+  --accent-dim: rgba(255, 255, 255, 0.12);
+  --accent-ink: #101010;
   --ok: #3fb950;
   --warn: #d29922;
   --danger: #f85149;
@@ -39,7 +41,7 @@ body.modal-open { overflow: hidden; }
 
 img { max-width: 100%; }
 
-a { color: var(--accent); }
+a { color: var(--text); }
 
 ::selection { background: var(--accent-dim); }
 
@@ -96,6 +98,12 @@ code {
 
 .icon-btn:hover { color: var(--text); border-color: var(--line-strong); background: var(--surface-2); }
 
+.icon-btn.active {
+  color: var(--text);
+  border-color: var(--line-strong);
+  background: var(--surface-3);
+}
+
 .ghost-btn {
   padding: 7px 12px;
   border-radius: 8px;
@@ -112,8 +120,8 @@ code {
 .primary-btn {
   padding: 8px 16px;
   border-radius: 8px;
-  background: var(--accent);
-  color: #fff;
+  background: var(--text);
+  color: var(--accent-ink);
   font-weight: 600;
   font-size: 14px;
   transition: filter 0.15s;
@@ -217,7 +225,7 @@ code {
   font-size: 14px;
 }
 
-.tab-add:hover { color: var(--accent); border-color: var(--accent); }
+.tab-add:hover { color: var(--text); border-color: var(--line-strong); }
 
 .controls {
   display: flex;
@@ -300,8 +308,8 @@ code {
   height: 36px;
   padding: 0 14px;
   border-radius: 9px;
-  background: var(--accent);
-  color: #fff;
+  background: var(--text);
+  color: var(--accent-ink);
   font-weight: 600;
   font-size: 14px;
   transition: filter 0.15s;
@@ -359,6 +367,25 @@ code {
 }
 
 .ghost-btn.small { padding: 4px 9px; font-size: 12px; }
+
+/* ---------- монохром / цвет ---------- */
+
+/* по умолчанию — монохром (как в PinRefBoard): превью в градациях серого,
+   цвета колонок переводятся в серые оттенки в app.js;
+   body.color (кнопка «Показать цвет») возвращает цвет */
+.card-thumb,
+.kb-card-thumb,
+.tile-preview img {
+  filter: grayscale(1) contrast(1.04);
+  transition: filter 0.45s ease;
+}
+
+body.color .card-thumb,
+body.color .kb-card-thumb,
+body.color .tile-preview img { filter: none; }
+
+.card:hover .card-thumb,
+.kb-card:hover .kb-card-thumb { filter: none; }
 
 /* ---------- masonry-сетка ---------- */
 
@@ -499,8 +526,9 @@ main {
   padding: 1px 7px;
   border-radius: 999px;
   font-size: 11px;
-  color: var(--accent);
-  background: var(--accent-dim);
+  color: var(--muted);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
   white-space: nowrap;
 }
 
@@ -679,8 +707,8 @@ main {
 .drop-indicator {
   height: 3px;
   border-radius: 2px;
-  background: var(--accent);
-  box-shadow: 0 0 8px var(--accent);
+  background: var(--text);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.35);
   flex: none;
 }
 
@@ -879,7 +907,7 @@ main {
 
 .palette-swatch.active {
   border-color: #fff;
-  box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent);
+  box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px rgba(255, 255, 255, 0.35);
 }
 
 .login-hint { color: var(--muted); font-size: 13.5px; margin: 0 0 12px; }
@@ -1083,7 +1111,7 @@ main {
 .toast {
   background: var(--surface-2);
   border: 1px solid var(--line-strong);
-  border-left: 3px solid var(--ok);
+  border-left: 3px solid var(--line-strong);
   border-radius: 10px;
   padding: 10px 14px;
   font-size: 13.5px;
@@ -1091,8 +1119,7 @@ main {
   animation: toast-in 0.18s ease-out;
 }
 
-.toast.warn { border-left-color: var(--warn); }
-
+/* ok/warn — монохромные, ошибка остаётся сигнальной */
 .toast.err { border-left-color: var(--danger); }
 
 .toast .toast-link { margin-left: 6px; color: var(--accent); cursor: pointer; }
