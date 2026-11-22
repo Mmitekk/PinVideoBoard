@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T11:07:00.001Z",
+  "updatedAt": "2026-11-22T11:14:41.931Z",
   "boards": [
     {
       "id": "b-main",
@@ -222,6 +222,29 @@ window.__PVB_DATA = {
           "addedAt": "Mon, 09 Mar 2026 17:01:33 +0000"
         }
       ]
+    },
+    {
+      "id": "bmwrqpaq29f50d",
+      "name": "Questions Time",
+      "createdAt": "2026-11-22T11:14:41.930Z",
+      "columns": [
+        {
+          "id": "cmwrqpaq2as96c",
+          "name": "Смотреть позже",
+          "color": "#4a9eff"
+        },
+        {
+          "id": "cmwrqpaq24iegk",
+          "name": "Смотрю",
+          "color": "#d29922"
+        },
+        {
+          "id": "cmwrqpaq2rb9ds",
+          "name": "Просмотрено",
+          "color": "#3fb950"
+        }
+      ],
+      "tiles": []
     }
   ]
 };
