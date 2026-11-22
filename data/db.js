@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T19:05:46.316Z",
+  "updatedAt": "2026-11-22T20:08:18.192Z",
   "boards": [
     {
       "id": "b-main",
@@ -3028,6 +3028,19 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "How to Use Unreal Engine’s New Landscape System - Mesh Terrain Tutorial",
           "thumb": "https://i.ytimg.com/vi/Lhj2LutYNjA/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        },
+        {
+          "id": "tmws9rimotdmni",
+          "addedAt": "2026-11-22T20:08:18.192Z",
+          "columnId": "cmws5orkfqs9cd",
+          "url": "https://www.youtube.com/watch?v=nTdth8d3VRE&list=WL&index=46&pp=iAQBsAgC",
+          "provider": "youtube",
+          "vid": "nTdth8d3VRE",
+          "vk": null,
+          "title": "Never Have Texture Stretching Again in UE5 (World Aligned Texture)",
+          "thumb": "https://i.ytimg.com/vi/nTdth8d3VRE/hqdefault.jpg",
           "tags": [],
           "note": ""
         }
