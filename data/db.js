@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-23T05:59:42.961Z",
+  "updatedAt": "2026-11-23T06:02:52.589Z",
   "boards": [
     {
       "id": "b-main",
@@ -3030,6 +3030,19 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Profiling with Pirates: Performance Plundered from a Real Game | Unreal Fest Chicago 2026",
           "thumb": "https://i.ytimg.com/vi/CYvLn-tYRag/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        },
+        {
+          "id": "tmwsv0565i91f1",
+          "addedAt": "2026-11-23T06:02:52.589Z",
+          "columnId": "cmwrr58y42zaij",
+          "url": "https://www.youtube.com/watch?v=TnRvkxf6tZY&list=WL&index=39&pp=iAQBsAgC",
+          "provider": "youtube",
+          "vid": "TnRvkxf6tZY",
+          "vk": null,
+          "title": "Optimizing Next-Gen Mobile Features in Unreal Engine | Unreal Fest Chicago 2026",
+          "thumb": "https://i.ytimg.com/vi/TnRvkxf6tZY/hqdefault.jpg",
           "tags": [],
           "note": ""
         }
