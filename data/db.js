@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-23T06:19:29.735Z",
+  "updatedAt": "2026-11-23T06:21:01.713Z",
   "boards": [
     {
       "id": "b-main",
@@ -3095,6 +3095,19 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Lessons Learned from Building a Very Large Open World Game in UE5 | Unreal Fest Chicago 2026",
           "thumb": "https://i.ytimg.com/vi/AalP65lrtpo/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        },
+        {
+          "id": "tmwsvnhjl7whrj",
+          "addedAt": "2026-11-23T06:21:01.713Z",
+          "columnId": "cmwrr58y42zaij",
+          "url": "https://www.youtube.com/watch?v=dKSHw_8vz3I&list=WL&index=34&pp=iAQBsAgC",
+          "provider": "youtube",
+          "vid": "dKSHw_8vz3I",
+          "vk": null,
+          "title": "A Frame’s Life: Frame Timing, Synchronization, and Latency in UE | Unreal Fest Chicago 2026",
+          "thumb": "https://i.ytimg.com/vi/dKSHw_8vz3I/hqdefault.jpg",
           "tags": [],
           "note": ""
         }
