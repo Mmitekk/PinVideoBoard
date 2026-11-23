@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-23T06:57:13.748Z",
+  "updatedAt": "2026-11-23T07:03:14.951Z",
   "boards": [
     {
       "id": "b-main",
@@ -283,6 +283,32 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Делаем траву, которая реагирует на персонажа в Unreal Engine 5",
           "thumb": "https://i.ytimg.com/vi/eT-G2CB_kUA/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        },
+        {
+          "id": "tmwswz0wp67uag",
+          "addedAt": "2026-11-23T06:57:59.641Z",
+          "columnId": "cmwrq4rzicgzex",
+          "url": "https://www.youtube.com/watch?v=-GrOEHiu4iI",
+          "provider": "youtube",
+          "vid": "-GrOEHiu4iI",
+          "vk": null,
+          "title": "You Can Now Generate Animations for FREE in Unreal Engine 5.9!",
+          "thumb": "https://i.ytimg.com/vi/-GrOEHiu4iI/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        },
+        {
+          "id": "tmwsx5s7bk2rff",
+          "addedAt": "2026-11-23T07:03:14.951Z",
+          "columnId": "cmwrq4rzicgzex",
+          "url": "https://www.youtube.com/watch?v=-GrOEHiu4iI",
+          "provider": "youtube",
+          "vid": "-GrOEHiu4iI",
+          "vk": null,
+          "title": "You Can Now Generate Animations for FREE in Unreal Engine 5.9!",
+          "thumb": "https://i.ytimg.com/vi/-GrOEHiu4iI/hqdefault.jpg",
           "tags": [],
           "note": ""
         }
