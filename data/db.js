@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-23T06:13:52.524Z",
+  "updatedAt": "2026-11-23T06:15:48.044Z",
   "boards": [
     {
       "id": "b-main",
@@ -3056,6 +3056,19 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Build It in Engine: Modern Rigging with Control Rig & Dataflow | Unreal Fest Chicago 2026",
           "thumb": "https://i.ytimg.com/vi/wmC4S3Woj5I/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        },
+        {
+          "id": "tmwsvgrikg0p5y",
+          "addedAt": "2026-11-23T06:15:48.044Z",
+          "columnId": "cmwrr58y42zaij",
+          "url": "https://www.youtube.com/watch?v=A9CtqkjEa94&list=WL&index=37&t=1147s&pp=iAQBsAgC",
+          "provider": "youtube",
+          "vid": "A9CtqkjEa94",
+          "vk": null,
+          "title": "MetaHumans x Clo: Workflows and Best Practices | Unreal Fest Chicago 2026",
+          "thumb": "https://i.ytimg.com/vi/A9CtqkjEa94/hqdefault.jpg",
           "tags": [],
           "note": ""
         }
