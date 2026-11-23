@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-23T05:52:18.434Z",
+  "updatedAt": "2026-11-23T05:59:42.961Z",
   "boards": [
     {
       "id": "b-main",
@@ -2050,6 +2050,19 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Are Nanite Trees in UE 5.7 the Best Solution Now?",
           "thumb": "https://i.ytimg.com/vi/odGPNA_TqOE/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        },
+        {
+          "id": "tmwsuw2upx8dyc",
+          "addedAt": "2026-11-23T05:59:42.961Z",
+          "columnId": "cmwrr4xgpj14pf",
+          "url": "https://www.youtube.com/watch?v=rky_GNM0EZs&list=WL&index=40&t=47s&pp=iAQB0gcJCQ4IAYcqIYzvsAgC",
+          "provider": "youtube",
+          "vid": "rky_GNM0EZs",
+          "vk": null,
+          "title": "Understanding Expanse for Unreal Engine | Complete Beginner Tutorial",
+          "thumb": "https://i.ytimg.com/vi/rky_GNM0EZs/hqdefault.jpg",
           "tags": [],
           "note": ""
         }
