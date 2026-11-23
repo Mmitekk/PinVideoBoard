@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-23T07:09:32.387Z",
+  "updatedAt": "2026-11-23T07:13:11.337Z",
   "boards": [
     {
       "id": "b-main",
@@ -3212,6 +3212,19 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "World Modeling and Vibe Simulation with Unreal Engine | Unreal Fest Chicago 2026",
           "thumb": "https://i.ytimg.com/vi/v6QujSBg4Xw/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        },
+        {
+          "id": "tmwsxikdl9oljs",
+          "addedAt": "2026-11-23T07:13:11.337Z",
+          "columnId": "cmwrr58y42zaij",
+          "url": "https://www.youtube.com/watch?v=BJ8gQQmJJ-U&list=WL&index=21&pp=iAQBsAgC",
+          "provider": "youtube",
+          "vid": "BJ8gQQmJJ-U",
+          "vk": null,
+          "title": "Project Health in Unreal Engine: The Technical Indicators That Matter | Unreal Fest Chicago 2026",
+          "thumb": "https://i.ytimg.com/vi/BJ8gQQmJJ-U/hqdefault.jpg",
           "tags": [],
           "note": ""
         }
