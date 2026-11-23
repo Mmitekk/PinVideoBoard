@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-23T07:05:11.333Z",
+  "updatedAt": "2026-11-23T07:07:23.162Z",
   "boards": [
     {
       "id": "b-main",
@@ -3186,6 +3186,19 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Growing Trees in Unreal Engine: PVE 5.8 New Features and Roadmap | Unreal Fest Chicago 2026",
           "thumb": "https://i.ytimg.com/vi/zfFq5e8Pxz0/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        },
+        {
+          "id": "tmwsxb3q2ov8it",
+          "addedAt": "2026-11-23T07:07:23.162Z",
+          "columnId": "cmwrr58y42zaij",
+          "url": "https://www.youtube.com/watch?v=BFfebAtBLfU&list=WL&index=25&pp=iAQBsAgC",
+          "provider": "youtube",
+          "vid": "BFfebAtBLfU",
+          "vk": null,
+          "title": "Scaling AI the Smart Way: Memory Footprint and Runtime Efficiency | Unreal Fest Chicago 2026",
+          "thumb": "https://i.ytimg.com/vi/BFfebAtBLfU/hqdefault.jpg",
           "tags": [],
           "note": ""
         }
