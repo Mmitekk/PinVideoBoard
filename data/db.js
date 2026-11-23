@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-23T13:47:59.596Z",
+  "updatedAt": "2026-11-23T18:40:06.047Z",
   "boards": [
     {
       "id": "b-main",
@@ -545,7 +545,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Answering Your Game Dev and Unreal Engine Questions",
           "thumb": "https://i.ytimg.com/vi/VF7Y8K9-1KU/hqdefault.jpg",
-          "duration": 0,
+          "duration": 5214,
           "tags": [
             "pinterest"
           ],
@@ -881,7 +881,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Unreal Engine 5 Tutorial -  Combat Scenario Part 2: AI Setup",
           "thumb": "https://i.ytimg.com/vi/Q2lFt55D964/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1230,
           "tags": [
             "pinterest"
           ],
@@ -913,7 +913,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Answering Your Unreal Engine Questions Live #149",
           "thumb": "https://i.ytimg.com/vi/jsjWl2gGgDQ/hqdefault.jpg",
-          "duration": 0,
+          "duration": 5050,
           "tags": [
             "pinterest"
           ],
@@ -929,7 +929,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Answering Your Unreal Engine 5 Questions #139",
           "thumb": "https://i.ytimg.com/vi/UQCwf705P9U/hqdefault.jpg",
-          "duration": 0,
+          "duration": 4308,
           "tags": [
             "pinterest"
           ],
@@ -945,7 +945,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Answering Your Unreal Engine 5 Questions #136",
           "thumb": "https://i.ytimg.com/vi/HrJZT1ErNQ8/hqdefault.jpg",
-          "duration": 0,
+          "duration": 4375,
           "tags": [
             "pinterest"
           ],
@@ -961,7 +961,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Question Time #128",
           "thumb": "https://i.ytimg.com/vi/LRdOro8Y05s/hqdefault.jpg",
-          "duration": 0,
+          "duration": 4525,
           "tags": [
             "pinterest"
           ],
@@ -977,7 +977,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Unreal Engine 5 Tutorial -  Combat Scenario Part 1: Setting the Scene",
           "thumb": "https://i.ytimg.com/vi/kqyD2LE_wfI/hqdefault.jpg",
-          "duration": 0,
+          "duration": 796,
           "tags": [
             "pinterest"
           ],
@@ -993,7 +993,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Answering Your Unreal Engine Questions Live",
           "thumb": "https://i.ytimg.com/vi/mN9FssgCo8Q/hqdefault.jpg",
-          "duration": 0,
+          "duration": 4220,
           "tags": [
             "pinterest"
           ],
@@ -1009,7 +1009,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Answering Your Unreal Engine 5 Questions Live!",
           "thumb": "https://i.ytimg.com/vi/FTDc03y4P-o/hqdefault.jpg",
-          "duration": 0,
+          "duration": 4208,
           "tags": [
             "pinterest"
           ],
@@ -1025,7 +1025,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Answering Your Unreal Engine Questions Live #148",
           "thumb": "https://i.ytimg.com/vi/cdo56aRgd-E/hqdefault.jpg",
-          "duration": 0,
+          "duration": 4910,
           "tags": [
             "pinterest"
           ],
@@ -1041,7 +1041,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Answering Your Unreal Engine Questions Live #146",
           "thumb": "https://i.ytimg.com/vi/gJ2umThAcDw/hqdefault.jpg",
-          "duration": 0,
+          "duration": 4880,
           "tags": [
             "pinterest"
           ],
@@ -1057,7 +1057,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Answering Your Unreal Engine 5 Questions #143",
           "thumb": "https://i.ytimg.com/vi/d9mJZ-7cqgk/hqdefault.jpg",
-          "duration": 0,
+          "duration": 4548,
           "tags": [
             "pinterest"
           ],
@@ -1073,7 +1073,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Answering Your Unreal Engine Questions Live #147",
           "thumb": "https://i.ytimg.com/vi/sM2q8QwQx8o/hqdefault.jpg",
-          "duration": 0,
+          "duration": 5060,
           "tags": [
             "pinterest"
           ],
@@ -1089,7 +1089,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Answering Your Unreal Engine 5 Questions Live",
           "thumb": "https://i.ytimg.com/vi/b7P6H_qo894/hqdefault.jpg",
-          "duration": 0,
+          "duration": 4367,
           "tags": [
             "pinterest"
           ],
@@ -1105,7 +1105,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Unreal Engine 5 Live Class - Let's Create Zelda Bosses",
           "thumb": "https://i.ytimg.com/vi/oU-cOoy5Bjs/hqdefault.jpg",
-          "duration": 0,
+          "duration": 7218,
           "tags": [
             "pinterest"
           ],
@@ -1121,7 +1121,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Answering Your Unreal Engine Questions Live",
           "thumb": "https://i.ytimg.com/vi/ZUpP7m8a9Vw/hqdefault.jpg",
-          "duration": 0,
+          "duration": 5761,
           "tags": [
             "pinterest"
           ],
@@ -1137,7 +1137,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Answering Your Unreal Engine 5 Questions #142",
           "thumb": "https://i.ytimg.com/vi/-kAbD_CQcr4/hqdefault.jpg",
-          "duration": 0,
+          "duration": 4664,
           "tags": [
             "pinterest"
           ],
@@ -1155,7 +1155,8 @@ window.__PVB_DATA = {
           "title": "Live Unreal Engine Support",
           "thumb": "https://i.ytimg.com/vi/R5rx5z-bbxc/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 3942
         },
         {
           "id": "tmws53fpj6jiyn",
@@ -1168,7 +1169,8 @@ window.__PVB_DATA = {
           "title": "Unreal Engine Live Support! Ask Your Questions Here!",
           "thumb": "https://i.ytimg.com/vi/DaWZMIJg6Bo/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 4761
         },
         {
           "id": "tmws57ts4hd7zg",
@@ -1181,7 +1183,8 @@ window.__PVB_DATA = {
           "title": "Unreal Engine Live Support! Ask Your Questions Here!",
           "thumb": "https://i.ytimg.com/vi/TqX0T-YIsSI/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 2801
         },
         {
           "id": "tmws57zosak36i",
@@ -1194,7 +1197,8 @@ window.__PVB_DATA = {
           "title": "Unreal Engine Live Support! Ask Your Questions Here!",
           "thumb": "https://i.ytimg.com/vi/TqX0T-YIsSI/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 2801
         },
         {
           "id": "tmws5a02oq0tzj",
@@ -1220,7 +1224,8 @@ window.__PVB_DATA = {
           "title": "Unreal Engine Live Support! Ask Your Questions Here!",
           "thumb": "https://i.ytimg.com/vi/EXjKS7ByxEc/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 4893
         },
         {
           "id": "tmws7j3nwtootk",
@@ -1233,7 +1238,8 @@ window.__PVB_DATA = {
           "title": "Live Unreal Engine Support",
           "thumb": "https://i.ytimg.com/vi/R5rx5z-bbxc/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 3942
         },
         {
           "id": "tmwscgjrgxyq60",
@@ -1246,7 +1252,8 @@ window.__PVB_DATA = {
           "title": "LIVE Unreal Engine Q&A | Blueprints, AI, Multiplayer & Game Development",
           "thumb": "https://i.ytimg.com/vi/WVKL7VhghvM/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 5776
         },
         {
           "id": "tmwscmul2i1ijb",
@@ -1259,7 +1266,8 @@ window.__PVB_DATA = {
           "title": "LIVE Unreal Engine Q&A | Blueprints, AI, Multiplayer & Game Development",
           "thumb": "https://i.ytimg.com/vi/go8HmfKnXZc/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 6943
         },
         {
           "id": "tmwsxzuiorypej",
@@ -1272,7 +1280,8 @@ window.__PVB_DATA = {
           "title": "LIVE Unreal Engine Q&A | Blueprints, AI, Multiplayer & Game Development",
           "thumb": "https://i.ytimg.com/vi/bXYSPHORV2A/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 4398
         },
         {
           "id": "tmwsy7kgymdxs3",
@@ -1285,7 +1294,8 @@ window.__PVB_DATA = {
           "title": "LIVE Unreal Engine Q&A | Gamescom, Game Dev, Unreal Engine",
           "thumb": "https://i.ytimg.com/vi/g2SEzrbfAgg/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 5215
         },
         {
           "id": "tmwsye5m7nld7o",
@@ -1298,7 +1308,8 @@ window.__PVB_DATA = {
           "title": "LIVE Unreal Engine Q&A | Unreal Engine & Game Dev Helpdesk",
           "thumb": "https://i.ytimg.com/vi/GXvBRJg91Fs/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 5355
         }
       ]
     },
@@ -1333,7 +1344,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Optimizing Niagara: a Practical Approach to Performant Worlds | Unreal Fest Orlando 2025",
           "thumb": "https://i.ytimg.com/vi/71c5yv-XeY8/hqdefault.jpg",
-          "duration": 0,
+          "duration": 2816,
           "tags": [
             "pinterest"
           ],
@@ -1349,7 +1360,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "#UE5 Series: Crafting a Dynamic Lava Material in Unreal Engine",
           "thumb": "https://i.ytimg.com/vi/a4RYhJFjUyg/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1791,
           "tags": [
             "pinterest"
           ],
@@ -1365,7 +1376,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "#UE5 Series: Falling Leaves effect using Niagara VFX",
           "thumb": "https://i.ytimg.com/vi/pDsXqvIaEDE/hqdefault.jpg",
-          "duration": 0,
+          "duration": 2014,
           "tags": [
             "pinterest"
           ],
@@ -1381,7 +1392,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "How to Make a Stylized Water Splash Using Niagara in Unreal Engine 5",
           "thumb": "https://i.ytimg.com/vi/vBk1Oak2nPk/hqdefault.jpg",
-          "duration": 0,
+          "duration": 404,
           "tags": [
             "pinterest"
           ],
@@ -1397,7 +1408,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "#UE5 Series: Mastering User Parameters in Niagara VFX!",
           "thumb": "https://i.ytimg.com/vi/gIqycQcfe5s/hqdefault.jpg",
-          "duration": 0,
+          "duration": 730,
           "tags": [
             "pinterest"
           ],
@@ -1437,7 +1448,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Make Reusable Platform Triggers in Unreal Engine",
           "thumb": "https://i.ytimg.com/vi/UD9Ob-yXpds/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1864,
           "tags": [
             "pinterest"
           ],
@@ -1453,7 +1464,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Make AAA Quality Game Assets in under 5 Minutes",
           "thumb": "https://i.ytimg.com/vi/zwUJwXLJGN4/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1271,
           "tags": [
             "pinterest"
           ],
@@ -1469,7 +1480,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "🔴LIVE - Let's create a Fortress in Unreal Engine 5! - Part 6",
           "thumb": "https://i.ytimg.com/vi/99c8O-VlVNY/hqdefault.jpg",
-          "duration": 0,
+          "duration": 8306,
           "tags": [
             "pinterest"
           ],
@@ -1485,7 +1496,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "🔴LIVE - How to create Landscapes for Environments in UE5",
           "thumb": "https://i.ytimg.com/vi/G11K3vWgaiE/hqdefault.jpg",
-          "duration": 0,
+          "duration": 7601,
           "tags": [
             "pinterest"
           ],
@@ -1501,7 +1512,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Все виды ФИЗИКИ В ИГРАХ | как делают физику в играх!  -  Подробный разбор",
           "thumb": "https://i.ytimg.com/vi/T6bHxQu7o3M/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1978,
           "tags": [
             "pinterest"
           ],
@@ -1517,7 +1528,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "This is the FASTEST way to UV models inside Unreal Engine 5",
           "thumb": "https://i.ytimg.com/vi/vYKlci_QlQE/hqdefault.jpg",
-          "duration": 0,
+          "duration": 360,
           "tags": [
             "pinterest"
           ],
@@ -1533,7 +1544,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Can Unreal Engine 5 replace Substance? Let's find out!",
           "thumb": "https://i.ytimg.com/vi/1S4D-SlD-GM/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1800,
           "tags": [
             "pinterest"
           ],
@@ -1549,7 +1560,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "🔴LIVE - Creating a Fortress in Unreal Engine 5!",
           "thumb": "https://i.ytimg.com/vi/WSWAVJJF4lA/hqdefault.jpg",
-          "duration": 0,
+          "duration": 7439,
           "tags": [
             "pinterest"
           ],
@@ -1565,7 +1576,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "#UE5 Series: Next-Level Water FX in UE 5.6!",
           "thumb": "https://i.ytimg.com/vi/Zc9_HADHpes/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1790,
           "tags": [
             "pinterest"
           ],
@@ -1581,7 +1592,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "#UE5 Series: Master Local Fog Volumes Like a Pro!",
           "thumb": "https://i.ytimg.com/vi/zABSHQVy5Cs/hqdefault.jpg",
-          "duration": 0,
+          "duration": 903,
           "tags": [
             "pinterest"
           ],
@@ -1597,7 +1608,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Каким должен быть текст в играх?",
           "thumb": "https://i.ytimg.com/vi/anzdOM3R6pY/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1286,
           "tags": [
             "pinterest"
           ],
@@ -1613,7 +1624,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "UE5.5 Megalights Lighting Tutorial",
           "thumb": "https://i.ytimg.com/vi/9-wY-OaVhMY/hqdefault.jpg",
-          "duration": 0,
+          "duration": 3155,
           "tags": [
             "pinterest"
           ],
@@ -1629,7 +1640,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "#UE5 Series: How the Scratch Module Works Its Magic in Unreal Engine",
           "thumb": "https://i.ytimg.com/vi/z8ZXq0_Pv9A/hqdefault.jpg",
-          "duration": 0,
+          "duration": 2799,
           "tags": [
             "pinterest"
           ],
@@ -1645,7 +1656,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "#UE5 Series: Parent a Prop to a Character in Unreal Engine | Animation Constraints",
           "thumb": "https://i.ytimg.com/vi/gATbYPxhzeY/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1735,
           "tags": [
             "pinterest"
           ],
@@ -1661,7 +1672,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "#UE5 Series: Chaos Destruction | Complete Guide Part 2",
           "thumb": "https://i.ytimg.com/vi/ONwD-bIm3GQ/hqdefault.jpg",
-          "duration": 0,
+          "duration": 2543,
           "tags": [
             "pinterest"
           ],
@@ -1677,7 +1688,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "UE5 Lighting Tutorial Exterior",
           "thumb": "https://i.ytimg.com/vi/z8y6GZlGSds/hqdefault.jpg",
-          "duration": 0,
+          "duration": 2029,
           "tags": [
             "pinterest"
           ],
@@ -1693,7 +1704,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Что такое «игровой нарратив»? Как игры рассказывают истории",
           "thumb": "https://i.ytimg.com/vi/hDAKJktghAU/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1029,
           "tags": [
             "pinterest"
           ],
@@ -1709,7 +1720,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "#UE5 Series: Decals in Unreal Engine",
           "thumb": "https://i.ytimg.com/vi/2EnRyuuhqcI/hqdefault.jpg",
-          "duration": 0,
+          "duration": 862,
           "tags": [
             "pinterest"
           ],
@@ -1725,7 +1736,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "ENHANCE your combat mechanics using these lessons from ELDEN RING",
           "thumb": "https://i.ytimg.com/vi/MFFdkw5g_gU/hqdefault.jpg",
-          "duration": 0,
+          "duration": 9790,
           "tags": [
             "pinterest"
           ],
@@ -1741,7 +1752,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "#UE5 Series: IK Rig Retargeting in UNREAL Engine 5.3 and 5.4",
           "thumb": "https://i.ytimg.com/vi/f6tm7NXEs0I/hqdefault.jpg",
-          "duration": 0,
+          "duration": 2835,
           "tags": [
             "pinterest"
           ],
@@ -1757,7 +1768,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "How Interactive Should My Game Story Be?",
           "thumb": "https://i.ytimg.com/vi/tq2n-DEUiVw/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1785,
           "tags": [
             "pinterest"
           ],
@@ -1773,7 +1784,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "UE5 Pathtrace Water Shader",
           "thumb": "https://i.ytimg.com/vi/JhtLun1thxg/hqdefault.jpg",
-          "duration": 0,
+          "duration": 2404,
           "tags": [
             "pinterest"
           ],
@@ -1789,7 +1800,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Data Layers | Unreal Engine 5",
           "thumb": "https://i.ytimg.com/vi/IAQOVYZqg48/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1080,
           "tags": [
             "pinterest"
           ],
@@ -1805,7 +1816,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Video Game Cities Are Weird",
           "thumb": "https://i.ytimg.com/vi/VRWDq2Xu7I0/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1368,
           "tags": [
             "pinterest"
           ],
@@ -1821,7 +1832,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "#UE5 Series: \"Faking\" Volumetric Smoke with Niagara VFX",
           "thumb": "https://i.ytimg.com/vi/Pwv-3Bp5epM/hqdefault.jpg",
-          "duration": 0,
+          "duration": 2536,
           "tags": [
             "pinterest"
           ],
@@ -1837,7 +1848,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "#UE5 Series: UV Mapping Tools in UNREAL Engine",
           "thumb": "https://i.ytimg.com/vi/eQc2Yz8hyeQ/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1666,
           "tags": [
             "pinterest"
           ],
@@ -1853,7 +1864,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "#UE5 Series: Chaos Destruction | Complete Guide Part 1",
           "thumb": "https://i.ytimg.com/vi/1DK46of-Syg/hqdefault.jpg",
-          "duration": 0,
+          "duration": 2846,
           "tags": [
             "pinterest"
           ],
@@ -1869,7 +1880,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Urban Planning in Games",
           "thumb": "https://i.ytimg.com/vi/Q3Scw3dzxWE/hqdefault.jpg",
-          "duration": 0,
+          "duration": 3609,
           "tags": [
             "pinterest"
           ],
@@ -1885,7 +1896,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "#UE5 Series: Creating Translucent Water Materials in UNREAL Engine",
           "thumb": "https://i.ytimg.com/vi/iSWHOef8R6Q/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1092,
           "tags": [
             "pinterest"
           ],
@@ -1901,7 +1912,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Modular Control Rig Tutorial | Unreal Engine 5.4",
           "thumb": "https://i.ytimg.com/vi/0KrrE4heS7s/hqdefault.jpg",
-          "duration": 0,
+          "duration": 861,
           "tags": [
             "pinterest"
           ],
@@ -1917,7 +1928,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "#UE5 Series: Path Tracing Using Render Layers in UNREAL Engine",
           "thumb": "https://i.ytimg.com/vi/6oe-BkbgZ1o/hqdefault.jpg",
-          "duration": 0,
+          "duration": 946,
           "tags": [
             "pinterest"
           ],
@@ -1933,7 +1944,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "#UE5 Series: Using Procedural Foliage Tool in UNREAL Engine",
           "thumb": "https://i.ytimg.com/vi/xhJLBoSl4gw/hqdefault.jpg",
-          "duration": 0,
+          "duration": 2022,
           "tags": [
             "pinterest"
           ],
@@ -1949,7 +1960,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "#UE5 Series: Answering YOUR Biggest Chaos Destruction Questions (With PRO Fixes!)",
           "thumb": "https://i.ytimg.com/vi/NvRtBsTjaUs/hqdefault.jpg",
-          "duration": 0,
+          "duration": 2517,
           "tags": [
             "pinterest"
           ],
@@ -1965,7 +1976,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "#UE5 Series: Chaos Destruction | Complete Guide Part 3 [Niagara Integration]",
           "thumb": "https://i.ytimg.com/vi/u3hSFnBQpBM/hqdefault.jpg",
-          "duration": 0,
+          "duration": 2630,
           "tags": [
             "pinterest"
           ],
@@ -1981,7 +1992,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "#UE5 Series: Should We Use MegaLights in UNREAL Engine 5.5?",
           "thumb": "https://i.ytimg.com/vi/THflPzJ9HBk/hqdefault.jpg",
-          "duration": 0,
+          "duration": 724,
           "tags": [
             "pinterest"
           ],
@@ -1997,7 +2008,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "#UE5 Series: You Asked, I Answered – Modular Rigging Q&A",
           "thumb": "https://i.ytimg.com/vi/D505y-MRIao/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1385,
           "tags": [
             "pinterest"
           ],
@@ -2013,7 +2024,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "#UE5 Series: Parent a Prop to a Character in Unreal Engine | The Snapper Tool",
           "thumb": "https://i.ytimg.com/vi/lmBtvkHmb28/hqdefault.jpg",
-          "duration": 0,
+          "duration": 529,
           "tags": [
             "pinterest"
           ],
@@ -2029,7 +2040,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Creating Natural Lighting in Unreal Engine: A Step-by-Step Guide",
           "thumb": "https://i.ytimg.com/vi/FP_GThNxEgk/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1570,
           "tags": [
             "pinterest"
           ],
@@ -2045,7 +2056,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "#UE5 Series: Modular Car Rigging in Unreal Engine",
           "thumb": "https://i.ytimg.com/vi/l2ZW6NXZsiQ/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1901,
           "tags": [
             "pinterest"
           ],
@@ -2061,7 +2072,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "...Why Skyrim?",
           "thumb": "https://i.ytimg.com/vi/YxYVmK3KTpI/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1738,
           "tags": [
             "pinterest"
           ],
@@ -2077,7 +2088,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Creating a UE5 Environment from Scratch: Part 1 - The Blockout",
           "thumb": "https://i.ytimg.com/vi/6X7wFPo7FmU/hqdefault.jpg",
-          "duration": 0,
+          "duration": 945,
           "tags": [
             "pinterest"
           ],
@@ -2093,7 +2104,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "What makes Elden Ring combat GREAT?",
           "thumb": "https://i.ytimg.com/vi/3BHEM0D7rqA/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1456,
           "tags": [
             "pinterest"
           ],
@@ -2111,7 +2122,8 @@ window.__PVB_DATA = {
           "title": "UE5: Creating Large Scale Game Assets",
           "thumb": "https://i.ytimg.com/vi/Ol7hXzXUBcI/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 3171
         },
         {
           "id": "tmws39i83rxt2n",
@@ -2124,7 +2136,8 @@ window.__PVB_DATA = {
           "title": "Niagara Examples Pack - бесплатно - Unreal Engine",
           "thumb": "https://i.ytimg.com/vi/0PU4zGBE2Oo/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 357
         },
         {
           "id": "tmws54y5geq09c",
@@ -2137,7 +2150,8 @@ window.__PVB_DATA = {
           "title": "DEVLOG Making a game in Unreal Engine 5 - Adding the Rock Materials",
           "thumb": "https://i.ytimg.com/vi/RttEGW_8oSg/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 434
         },
         {
           "id": "tmws5jx75e2qd1",
@@ -2150,7 +2164,8 @@ window.__PVB_DATA = {
           "title": "How To Create Realistic Fall Damage in Unreal Engine 5",
           "thumb": "https://i.ytimg.com/vi/OZZdAh0jHZ8/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 388
         },
         {
           "id": "tmws5lfvosjdua",
@@ -2163,7 +2178,8 @@ window.__PVB_DATA = {
           "title": "Are Nanite Trees in UE 5.7 the Best Solution Now?",
           "thumb": "https://i.ytimg.com/vi/odGPNA_TqOE/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 882
         },
         {
           "id": "tmwsuw2upx8dyc",
@@ -2176,7 +2192,8 @@ window.__PVB_DATA = {
           "title": "Understanding Expanse for Unreal Engine | Complete Beginner Tutorial",
           "thumb": "https://i.ytimg.com/vi/rky_GNM0EZs/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 1424
         }
       ]
     },
@@ -2211,7 +2228,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Разработчики портят графику — постэффекты в играх",
           "thumb": "https://i.ytimg.com/vi/LeKH015GHVg/hqdefault.jpg",
-          "duration": 0,
+          "duration": 486,
           "tags": [
             "pinterest"
           ],
@@ -2227,7 +2244,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Графика хорроров чуть интересней, чем кажется",
           "thumb": "https://i.ytimg.com/vi/GRdXskyVKsY/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1307,
           "tags": [
             "pinterest"
           ],
@@ -2243,7 +2260,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Визуальный язык дизайна уровней",
           "thumb": "https://i.ytimg.com/vi/NfZm_hDIXZ0/hqdefault.jpg",
-          "duration": 0,
+          "duration": 705,
           "tags": [
             "pinterest"
           ],
@@ -2259,7 +2276,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Дизайн звука в Last of Us 2 — маниакальное внимание к деталям",
           "thumb": "https://i.ytimg.com/vi/toNNSvZrPOQ/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1200,
           "tags": [
             "pinterest"
           ],
@@ -2275,7 +2292,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Как удержать внимание игрока",
           "thumb": "https://i.ytimg.com/vi/LhU4SDT5E5U/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1028,
           "tags": [
             "pinterest"
           ],
@@ -2291,7 +2308,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Blueprint Librarium c Сергеем Праздничновым",
           "thumb": "https://i.ytimg.com/vi/Pkm89LgaFdo/hqdefault.jpg",
-          "duration": 0,
+          "duration": 5240,
           "tags": [
             "pinterest"
           ],
@@ -2307,7 +2324,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Cyberpunk 2077: почему вам померещилась нелинейность",
           "thumb": "https://i.ytimg.com/vi/PUyYrMIqI54/hqdefault.jpg",
-          "duration": 0,
+          "duration": 623,
           "tags": [
             "pinterest"
           ],
@@ -2323,7 +2340,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Как работает разрушаемость и эффекты в Control: трюки и секреты разработчиков",
           "thumb": "https://i.ytimg.com/vi/v-M1ORl1gDY/hqdefault.jpg",
-          "duration": 0,
+          "duration": 601,
           "tags": [
             "pinterest"
           ],
@@ -2355,7 +2372,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Как делать баланс в играх",
           "thumb": "https://i.ytimg.com/vi/qMrbcV6mVSE/hqdefault.jpg",
-          "duration": 0,
+          "duration": 5282,
           "tags": [
             "pinterest"
           ],
@@ -2371,7 +2388,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Эмерджентность — как игроки создают опыт. Системные игры",
           "thumb": "https://i.ytimg.com/vi/jSY3FARLTww/hqdefault.jpg",
-          "duration": 0,
+          "duration": 972,
           "tags": [
             "pinterest"
           ],
@@ -2387,7 +2404,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Подкаст. Разработчики Dead Weight",
           "thumb": "https://i.ytimg.com/vi/-q29CUj-6rc/hqdefault.jpg",
-          "duration": 0,
+          "duration": 5210,
           "tags": [
             "pinterest"
           ],
@@ -2403,7 +2420,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Как создают иллюзию масштабного мира в играх",
           "thumb": "https://i.ytimg.com/vi/tCC1Lh6wFRo/hqdefault.jpg",
-          "duration": 0,
+          "duration": 621,
           "tags": [
             "pinterest"
           ],
@@ -2435,7 +2452,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Как менялся дизайн уровней в играх Bethesda",
           "thumb": "https://i.ytimg.com/vi/pDGRw7Hsj-g/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1890,
           "tags": [
             "pinterest"
           ],
@@ -2451,7 +2468,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "GoldenEye: игра, изменившая искусственный интеллект",
           "thumb": "https://i.ytimg.com/vi/EkmmdpXSBX0/hqdefault.jpg",
-          "duration": 0,
+          "duration": 692,
           "tags": [
             "pinterest"
           ],
@@ -2467,7 +2484,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Как игры эксплуатируют наши фобии",
           "thumb": "https://i.ytimg.com/vi/Mx0iN_7infE/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1993,
           "tags": [
             "pinterest"
           ],
@@ -2483,7 +2500,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Как работает пререндер",
           "thumb": "https://i.ytimg.com/vi/pzRsqxpNeAk/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1060,
           "tags": [
             "pinterest"
           ],
@@ -2499,7 +2516,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Как развить механику, чтобы игрок не заскучал",
           "thumb": "https://i.ytimg.com/vi/CT_F10KCU-k/hqdefault.jpg",
-          "duration": 0,
+          "duration": 705,
           "tags": [
             "pinterest"
           ],
@@ -2515,7 +2532,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Как устроен геймдизайн (но это неточно)",
           "thumb": "https://i.ytimg.com/vi/CcO0TQObcZ4/hqdefault.jpg",
-          "duration": 0,
+          "duration": 8958,
           "tags": [
             "pinterest"
           ],
@@ -2531,7 +2548,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Как работают квестовые системы",
           "thumb": "https://i.ytimg.com/vi/kh5cSM6D97A/hqdefault.jpg",
-          "duration": 0,
+          "duration": 7356,
           "tags": [
             "pinterest"
           ],
@@ -2547,7 +2564,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Разбираем уровни Baldur’s Gate 3",
           "thumb": "https://i.ytimg.com/vi/YrJzpJcS2tY/hqdefault.jpg",
-          "duration": 0,
+          "duration": 10312,
           "tags": [
             "pinterest"
           ],
@@ -2563,7 +2580,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "История создания KotOR II: сквозь тернии к «Звёздным войнам»",
           "thumb": "https://i.ytimg.com/vi/3H_xffYI3lc/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1187,
           "tags": [
             "pinterest"
           ],
@@ -2603,7 +2620,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Unreal Fest Stockholm 2025 Collection - Animated Foliage in Witcher 4 & the Future of Nanite Foliage",
           "thumb": "https://i.ytimg.com/vi/bfmfYpJ3cZ4/hqdefault.jpg",
-          "duration": 0,
+          "duration": 4425,
           "tags": [
             "pinterest"
           ],
@@ -2619,7 +2636,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Advanced Groom Dataflow Setup in UE 5.7 | Unreal Fest Stockholm 2025",
           "thumb": "https://i.ytimg.com/vi/cER2jT8oxKY/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1906,
           "tags": [
             "pinterest"
           ],
@@ -2635,7 +2652,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Unreal Fest Stockholm 2025 Collection - Profiling, Telemetry, and Performance",
           "thumb": "https://i.ytimg.com/vi/CijCVXa0wBQ/hqdefault.jpg",
-          "duration": 0,
+          "duration": 8705,
           "tags": [
             "pinterest"
           ],
@@ -2651,7 +2668,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "The Future of Nanite Foliage | Unreal Fest Stockholm 2025",
           "thumb": "https://i.ytimg.com/vi/aZr-mWAzoTg/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1747,
           "tags": [
             "pinterest"
           ],
@@ -2667,7 +2684,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Profiling with Purpose: Performance Lessons from a Real Unreal Project | Unreal Fest Stockholm 2025",
           "thumb": "https://i.ytimg.com/vi/C-AjCqjKRSs/hqdefault.jpg",
-          "duration": 0,
+          "duration": 3450,
           "tags": [
             "pinterest"
           ],
@@ -2683,7 +2700,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Large Scale Animated Foliage in The Witcher 4 Unreal Engine 5 Tech Demo | Unreal Fest Stockholm 2025",
           "thumb": "https://i.ytimg.com/vi/EdNkm0ezP0o/hqdefault.jpg",
-          "duration": 0,
+          "duration": 2247,
           "tags": [
             "pinterest"
           ],
@@ -2699,7 +2716,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Crafting Parametric Hairstyles for MetaHumans | Unreal Fest Stockholm 2025",
           "thumb": "https://i.ytimg.com/vi/rfKzdI9X9Hg/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1692,
           "tags": [
             "pinterest"
           ],
@@ -2715,7 +2732,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Self-Publishing to the Epic Games Store | Unreal Fest Orlando 2025",
           "thumb": "https://i.ytimg.com/vi/vPGzK6dzK5A/hqdefault.jpg",
-          "duration": 0,
+          "duration": 2861,
           "tags": [
             "pinterest"
           ],
@@ -2731,7 +2748,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "MetaHuman: Facial Expression Editing | Unreal Fest Orlando 2025",
           "thumb": "https://i.ytimg.com/vi/WxQEtO3ndoY/hqdefault.jpg",
-          "duration": 0,
+          "duration": 2094,
           "tags": [
             "pinterest"
           ],
@@ -2747,7 +2764,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Dynamic Destruction in UE5 with the Chaos Destruction System | GDC 2025",
           "thumb": "https://i.ytimg.com/vi/wPgd1J1Tf70/hqdefault.jpg",
-          "duration": 0,
+          "duration": 2793,
           "tags": [
             "pinterest"
           ],
@@ -2763,7 +2780,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "The Future of Animation Retargeting in Unreal Engine | Unreal Fest Orlando 2025",
           "thumb": "https://i.ytimg.com/vi/-8CQNaODNNA/hqdefault.jpg",
-          "duration": 0,
+          "duration": 2669,
           "tags": [
             "pinterest"
           ],
@@ -2779,7 +2796,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "State of Performance Capture in Unreal Engine | Unreal Fest Orlando 2025",
           "thumb": "https://i.ytimg.com/vi/n-k4Br3lXEQ/hqdefault.jpg",
-          "duration": 0,
+          "duration": 2105,
           "tags": [
             "pinterest"
           ],
@@ -2795,7 +2812,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "State of Animation Authoring Tools in UE 5.6 | Unreal Fest Orlando 2025",
           "thumb": "https://i.ytimg.com/vi/i-_ikewib7s/hqdefault.jpg",
-          "duration": 0,
+          "duration": 2152,
           "tags": [
             "pinterest"
           ],
@@ -2811,7 +2828,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Blueprint Vs. C++ - Knowing the Difference & When to Apply It | Inside Unreal",
           "thumb": "https://i.ytimg.com/vi/6XkyDjry3ag/hqdefault.jpg",
-          "duration": 0,
+          "duration": 9190,
           "tags": [
             "pinterest"
           ],
@@ -2827,7 +2844,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Keyframes to Real-Time: Ozone-Powered Character Journey across Animation Spectrum | Unreal Fest 2024",
           "thumb": "https://i.ytimg.com/vi/fbiaK0qJ2iY/hqdefault.jpg",
-          "duration": 0,
+          "duration": 3182,
           "tags": [
             "pinterest"
           ],
@@ -2843,7 +2860,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Introduction to Day Sequence | Unreal Fest 2024",
           "thumb": "https://i.ytimg.com/vi/xQKPsQeTcOg/hqdefault.jpg",
-          "duration": 0,
+          "duration": 2016,
           "tags": [
             "pinterest"
           ],
@@ -2859,7 +2876,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Gameplay-Conscious Level Design | Inside Unreal",
           "thumb": "https://i.ytimg.com/vi/UK9SRMPRgoE/hqdefault.jpg",
-          "duration": 0,
+          "duration": 7510,
           "tags": [
             "pinterest"
           ],
@@ -2875,7 +2892,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Advanced Animation Techniques | Unreal Fest 2024",
           "thumb": "https://i.ytimg.com/vi/z1OmjnFZUgc/hqdefault.jpg",
-          "duration": 0,
+          "duration": 2577,
           "tags": [
             "pinterest"
           ],
@@ -2891,7 +2908,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Optimizing Survival Games for Mobile | Unreal Fest 2024",
           "thumb": "https://i.ytimg.com/vi/X_ir86-Cpvk/hqdefault.jpg",
-          "duration": 0,
+          "duration": 2585,
           "tags": [
             "pinterest"
           ],
@@ -2907,7 +2924,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "An Inside Look at Hogwarts Legacy Unreal Engine Extensions | GDC 2024",
           "thumb": "https://i.ytimg.com/vi/M-Xoa4shre4/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1126,
           "tags": [
             "pinterest"
           ],
@@ -2923,7 +2940,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "SoundMorph MetaSound Pack | GameSoundCon 2023 | Unreal Engine",
           "thumb": "https://i.ytimg.com/vi/IuZJosBNB7w/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1814,
           "tags": [
             "pinterest"
           ],
@@ -2939,7 +2956,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "MetaSound Visualizations and UX | GameSoundCon 2023 | Unreal Engine",
           "thumb": "https://i.ytimg.com/vi/5V4kaSZHdrE/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1938,
           "tags": [
             "pinterest"
           ],
@@ -2955,7 +2972,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Landscape Basics: Medieval Game Environment extended tutorial",
           "thumb": "https://i.ytimg.com/vi/HVoaR0Um08w/hqdefault.jpg",
-          "duration": 0,
+          "duration": 745,
           "tags": [
             "pinterest"
           ],
@@ -2971,7 +2988,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Two Falls - Designing for Perspective | Inside Unreal",
           "thumb": "https://i.ytimg.com/vi/l7i5wbQXK1c/hqdefault.jpg",
-          "duration": 0,
+          "duration": 7056,
           "tags": [
             "pinterest"
           ],
@@ -2987,7 +3004,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Optimal Collision & Avoiding Common Collision Mistakes | Inside Unreal",
           "thumb": "https://i.ytimg.com/vi/XRHzrFZNb1A/hqdefault.jpg",
-          "duration": 0,
+          "duration": 7820,
           "tags": [
             "pinterest"
           ],
@@ -3003,7 +3020,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Optimizing UE5: Advanced Rendering, Graphics Performance, and Memory Management | Unreal Fest 2024",
           "thumb": "https://i.ytimg.com/vi/dj4kNnj4FAQ/hqdefault.jpg",
-          "duration": 0,
+          "duration": 3074,
           "tags": [
             "pinterest"
           ],
@@ -3019,7 +3036,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Exploring the Dark Ruins Megascans Sample | Inside Unreal",
           "thumb": "https://i.ytimg.com/vi/l3VFQk0aog8/hqdefault.jpg",
-          "duration": 0,
+          "duration": 7365,
           "tags": [
             "pinterest"
           ],
@@ -3035,7 +3052,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Motion Matching and the Game Animation Sample in UE 5.4 | Unreal Fest 2024",
           "thumb": "https://i.ytimg.com/vi/tNw9lD2PW3U/hqdefault.jpg",
-          "duration": 0,
+          "duration": 2488,
           "tags": [
             "pinterest"
           ],
@@ -3051,7 +3068,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Psychology of Environment Art Pt. 3 | Inside Unreal",
           "thumb": "https://i.ytimg.com/vi/6z2v24mkWBs/hqdefault.jpg",
-          "duration": 0,
+          "duration": 9270,
           "tags": [
             "pinterest"
           ],
@@ -3067,7 +3084,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Creating Classic MMO Mechanics in UE: Ruins of Tearyn | Inside Unreal",
           "thumb": "https://i.ytimg.com/vi/9YOA3cONmGI/hqdefault.jpg",
-          "duration": 0,
+          "duration": 7480,
           "tags": [
             "pinterest"
           ],
@@ -3083,7 +3100,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Modular Rigging in Unreal Engine | Unreal Fest 2024",
           "thumb": "https://i.ytimg.com/vi/liV7Vr3VKX8/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1440,
           "tags": [
             "pinterest"
           ],
@@ -3099,7 +3116,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Unreal Engine 5 Character and Animation Optimizations | Unreal Fest 2024",
           "thumb": "https://i.ytimg.com/vi/N_suMyUuork/hqdefault.jpg",
-          "duration": 0,
+          "duration": 2750,
           "tags": [
             "pinterest"
           ],
@@ -3117,7 +3134,8 @@ window.__PVB_DATA = {
           "title": "Automated Performance Profiling for Local Workflows | Inside Unreal",
           "thumb": "https://i.ytimg.com/vi/bfkbwXVMtn8/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 6940
         },
         {
           "id": "tmws4zvq7sgkog",
@@ -3130,7 +3148,8 @@ window.__PVB_DATA = {
           "title": "Creating High-Fidelity Digital Humans on a Small Budget w/ MetaHuman | Indie Games Week 2026",
           "thumb": "https://i.ytimg.com/vi/Oig-vdPd9ak/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 9465
         },
         {
           "id": "tmwsumjuquwtgx",
@@ -3143,7 +3162,8 @@ window.__PVB_DATA = {
           "title": "Profiling with Pirates: Performance Plundered from a Real Game | Unreal Fest Chicago 2026",
           "thumb": "https://i.ytimg.com/vi/CYvLn-tYRag/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 2711
         },
         {
           "id": "tmwsv0565i91f1",
@@ -3156,7 +3176,8 @@ window.__PVB_DATA = {
           "title": "Optimizing Next-Gen Mobile Features in Unreal Engine | Unreal Fest Chicago 2026",
           "thumb": "https://i.ytimg.com/vi/TnRvkxf6tZY/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 3340
         },
         {
           "id": "tmwsveadotjqjs",
@@ -3169,7 +3190,8 @@ window.__PVB_DATA = {
           "title": "Build It in Engine: Modern Rigging with Control Rig & Dataflow | Unreal Fest Chicago 2026",
           "thumb": "https://i.ytimg.com/vi/wmC4S3Woj5I/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 2278
         },
         {
           "id": "tmwsvgrikg0p5y",
@@ -3182,7 +3204,8 @@ window.__PVB_DATA = {
           "title": "MetaHumans x Clo: Workflows and Best Practices | Unreal Fest Chicago 2026",
           "thumb": "https://i.ytimg.com/vi/A9CtqkjEa94/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 2232
         },
         {
           "id": "tmwsvjiky5gfby",
@@ -3195,7 +3218,8 @@ window.__PVB_DATA = {
           "title": "The Player Was Here: Persisting World State and Actor LOD Systems | Unreal Fest Chicago 2026",
           "thumb": "https://i.ytimg.com/vi/KBn62trwkLw/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 2936
         },
         {
           "id": "tmwsvliknoc44e",
@@ -3208,7 +3232,8 @@ window.__PVB_DATA = {
           "title": "Lessons Learned from Building a Very Large Open World Game in UE5 | Unreal Fest Chicago 2026",
           "thumb": "https://i.ytimg.com/vi/AalP65lrtpo/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 2250
         },
         {
           "id": "tmwsvnhjl7whrj",
@@ -3221,7 +3246,8 @@ window.__PVB_DATA = {
           "title": "A Frame’s Life: Frame Timing, Synchronization, and Latency in UE | Unreal Fest Chicago 2026",
           "thumb": "https://i.ytimg.com/vi/dKSHw_8vz3I/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 3167
         },
         {
           "id": "tmwsw6h1e0965r",
@@ -3234,7 +3260,8 @@ window.__PVB_DATA = {
           "title": "MetaHumans in Blender: Using OpenRigLogic to Customize DNA's Behavior | Inside Unreal",
           "thumb": "https://i.ytimg.com/vi/WZhDr5Ktf9c/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 4970
         },
         {
           "id": "tmwswh8qbitibn",
@@ -3247,7 +3274,8 @@ window.__PVB_DATA = {
           "title": "Growing Trees in Unreal Engine: PVE 5.8 New Features and Roadmap | Unreal Fest Chicago 2026",
           "thumb": "https://i.ytimg.com/vi/zfFq5e8Pxz0/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 2275
         },
         {
           "id": "tmwsxb3q2ov8it",
@@ -3260,7 +3288,8 @@ window.__PVB_DATA = {
           "title": "Scaling AI the Smart Way: Memory Footprint and Runtime Efficiency | Unreal Fest Chicago 2026",
           "thumb": "https://i.ytimg.com/vi/BFfebAtBLfU/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 1987
         },
         {
           "id": "tmwsxdvfnt7xc0",
@@ -3273,7 +3302,8 @@ window.__PVB_DATA = {
           "title": "World Modeling and Vibe Simulation with Unreal Engine | Unreal Fest Chicago 2026",
           "thumb": "https://i.ytimg.com/vi/v6QujSBg4Xw/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 2922
         },
         {
           "id": "tmwsxikdl9oljs",
@@ -3286,7 +3316,8 @@ window.__PVB_DATA = {
           "title": "Project Health in Unreal Engine: The Technical Indicators That Matter | Unreal Fest Chicago 2026",
           "thumb": "https://i.ytimg.com/vi/BJ8gQQmJJ-U/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 2661
         },
         {
           "id": "tmwsxkr4z3dyji",
@@ -3299,7 +3330,8 @@ window.__PVB_DATA = {
           "title": "Beyond Native: Real-Time Scientific & Cable Simulation in UE5 | Unreal Fest Chicago 2026",
           "thumb": "https://i.ytimg.com/vi/ngx2Cy5tkXo/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 2480
         },
         {
           "id": "tmwsxmnzton1tq",
@@ -3312,7 +3344,8 @@ window.__PVB_DATA = {
           "title": "Getting Started with MCP in Unreal Engine 5.8 I Epic Games Education Webinar",
           "thumb": "https://i.ytimg.com/vi/k0tgmrBuIJc/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 3652
         },
         {
           "id": "tmwsyh4op9kuh5",
@@ -3325,7 +3358,8 @@ window.__PVB_DATA = {
           "title": "Getting Started with Megalights in Unreal Engine 5.8 I Epic Games Education Webinar",
           "thumb": "https://i.ytimg.com/vi/LPKz7gH-T0U/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 2176
         }
       ]
     },
@@ -3362,7 +3396,8 @@ window.__PVB_DATA = {
           "title": "This AI Chases You... Until You Look At It | UE5 Tutorial",
           "thumb": "https://i.ytimg.com/vi/DBPfweu8GaY/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 736
         },
         {
           "id": "tmws5s84czld76",
