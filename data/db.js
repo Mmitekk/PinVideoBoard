@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-23T06:44:09.972Z",
+  "updatedAt": "2026-11-23T06:45:05.505Z",
   "boards": [
     {
       "id": "b-main",
@@ -244,6 +244,19 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Создание ГЛАВНОГО МЕНЮ. Часть 4 - Опции игры | Уроки Unreal Engine",
           "thumb": "https://i.ytimg.com/vi/xmLZGSDNePQ/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        },
+        {
+          "id": "tmwswifkxqt2pn",
+          "addedAt": "2026-11-23T06:45:05.505Z",
+          "columnId": "cmwrq4rzicgzex",
+          "url": "https://www.youtube.com/watch?v=XlbWtoIk-Zc&list=WL&index=26&pp=iAQBsAgC",
+          "provider": "youtube",
+          "vid": "XlbWtoIk-Zc",
+          "vk": null,
+          "title": "A Practical Look at Mesh Terrain | Inside Unreal",
+          "thumb": "https://i.ytimg.com/vi/XlbWtoIk-Zc/hqdefault.jpg",
           "tags": [],
           "note": ""
         }
