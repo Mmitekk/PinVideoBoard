@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-23T06:17:56.434Z",
+  "updatedAt": "2026-11-23T06:19:29.735Z",
   "boards": [
     {
       "id": "b-main",
@@ -3082,6 +3082,19 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "The Player Was Here: Persisting World State and Actor LOD Systems | Unreal Fest Chicago 2026",
           "thumb": "https://i.ytimg.com/vi/KBn62trwkLw/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        },
+        {
+          "id": "tmwsvliknoc44e",
+          "addedAt": "2026-11-23T06:19:29.735Z",
+          "columnId": "cmwrr58y42zaij",
+          "url": "https://www.youtube.com/watch?v=AalP65lrtpo&list=WL&index=35&pp=iAQBsAgC",
+          "provider": "youtube",
+          "vid": "AalP65lrtpo",
+          "vk": null,
+          "title": "Lessons Learned from Building a Very Large Open World Game in UE5 | Unreal Fest Chicago 2026",
+          "thumb": "https://i.ytimg.com/vi/AalP65lrtpo/hqdefault.jpg",
           "tags": [],
           "note": ""
         }
