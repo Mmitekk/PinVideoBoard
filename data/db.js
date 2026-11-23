@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-23T07:13:11.337Z",
+  "updatedAt": "2026-11-23T07:14:53.411Z",
   "boards": [
     {
       "id": "b-main",
@@ -3225,6 +3225,19 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Project Health in Unreal Engine: The Technical Indicators That Matter | Unreal Fest Chicago 2026",
           "thumb": "https://i.ytimg.com/vi/BJ8gQQmJJ-U/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        },
+        {
+          "id": "tmwsxkr4z3dyji",
+          "addedAt": "2026-11-23T07:14:53.411Z",
+          "columnId": "cmwrr58y42zaij",
+          "url": "https://www.youtube.com/watch?v=ngx2Cy5tkXo&list=WL&index=20&t=4s&pp=iAQBsAgC",
+          "provider": "youtube",
+          "vid": "ngx2Cy5tkXo",
+          "vk": null,
+          "title": "Beyond Native: Real-Time Scientific & Cable Simulation in UE5 | Unreal Fest Chicago 2026",
+          "thumb": "https://i.ytimg.com/vi/ngx2Cy5tkXo/hqdefault.jpg",
           "tags": [],
           "note": ""
         }
