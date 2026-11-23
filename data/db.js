@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-23T06:55:41.130Z",
+  "updatedAt": "2026-11-23T06:57:13.748Z",
   "boards": [
     {
       "id": "b-main",
@@ -220,19 +220,6 @@ window.__PVB_DATA = {
           ],
           "note": "",
           "addedAt": "2026-11-22T11:07:00.000Z"
-        },
-        {
-          "id": "tmwrq6skddxch5",
-          "addedAt": "2026-11-22T11:00:18.589Z",
-          "columnId": "cmwrq4rzicgzex",
-          "url": "https://www.youtube.com/watch?v=eT-G2CB_kUA",
-          "provider": "youtube",
-          "vid": "eT-G2CB_kUA",
-          "vk": null,
-          "title": "Делаем траву, которая реагирует на персонажа в Unreal Engine 5",
-          "thumb": "https://i.ytimg.com/vi/eT-G2CB_kUA/hqdefault.jpg",
-          "tags": [],
-          "note": ""
         },
         {
           "id": "tmws5n39u60cna",
