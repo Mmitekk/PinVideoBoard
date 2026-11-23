@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-23T07:37:45.199Z",
+  "updatedAt": "2026-11-23T07:40:03.961Z",
   "boards": [
     {
       "id": "b-main",
@@ -3303,6 +3303,19 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Getting Started with MCP in Unreal Engine 5.8 I Epic Games Education Webinar",
           "thumb": "https://i.ytimg.com/vi/k0tgmrBuIJc/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        },
+        {
+          "id": "tmwsyh4op9kuh5",
+          "addedAt": "2026-11-23T07:40:03.961Z",
+          "columnId": "cmwrr58y42zaij",
+          "url": "https://www.youtube.com/watch?v=LPKz7gH-T0U&list=WL&index=8&pp=iAQBsAgC",
+          "provider": "youtube",
+          "vid": "LPKz7gH-T0U",
+          "vk": null,
+          "title": "Getting Started with Megalights in Unreal Engine 5.8 I Epic Games Education Webinar",
+          "thumb": "https://i.ytimg.com/vi/LPKz7gH-T0U/hqdefault.jpg",
           "tags": [],
           "note": ""
         }
