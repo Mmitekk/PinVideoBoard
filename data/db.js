@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-23T07:32:37.858Z",
+  "updatedAt": "2026-11-23T07:36:40.657Z",
   "boards": [
     {
       "id": "b-main",
@@ -296,6 +296,19 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "You Can Now Generate Animations for FREE in Unreal Engine 5.9!",
           "thumb": "https://i.ytimg.com/vi/-GrOEHiu4iI/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        },
+        {
+          "id": "tmwsycrtdi6g41",
+          "addedAt": "2026-11-23T07:36:40.657Z",
+          "columnId": "cmwrq4rzicgzex",
+          "url": "https://www.youtube.com/watch?v=fSzGqPRBvOQ&list=WL&index=18&pp=iAQBsAgC",
+          "provider": "youtube",
+          "vid": "fSzGqPRBvOQ",
+          "vk": null,
+          "title": "YOU’RE SLEEPING on Unreal Engine’s Secret Asset!",
+          "thumb": "https://i.ytimg.com/vi/fSzGqPRBvOQ/hqdefault.jpg",
           "tags": [],
           "note": ""
         }
