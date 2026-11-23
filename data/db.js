@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-23T06:15:48.044Z",
+  "updatedAt": "2026-11-23T06:17:56.434Z",
   "boards": [
     {
       "id": "b-main",
@@ -3069,6 +3069,19 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "MetaHumans x Clo: Workflows and Best Practices | Unreal Fest Chicago 2026",
           "thumb": "https://i.ytimg.com/vi/A9CtqkjEa94/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        },
+        {
+          "id": "tmwsvjiky5gfby",
+          "addedAt": "2026-11-23T06:17:56.434Z",
+          "columnId": "cmwrr58y42zaij",
+          "url": "https://www.youtube.com/watch?v=KBn62trwkLw&list=WL&index=36&pp=iAQBsAgC",
+          "provider": "youtube",
+          "vid": "KBn62trwkLw",
+          "vk": null,
+          "title": "The Player Was Here: Persisting World State and Actor LOD Systems | Unreal Fest Chicago 2026",
+          "thumb": "https://i.ytimg.com/vi/KBn62trwkLw/hqdefault.jpg",
           "tags": [],
           "note": ""
         }
