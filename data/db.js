@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-23T06:45:05.505Z",
+  "updatedAt": "2026-11-23T06:47:57.686Z",
   "boards": [
     {
       "id": "b-main",
@@ -257,6 +257,19 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "A Practical Look at Mesh Terrain | Inside Unreal",
           "thumb": "https://i.ytimg.com/vi/XlbWtoIk-Zc/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        },
+        {
+          "id": "tmwswm4fqkl4ui",
+          "addedAt": "2026-11-23T06:47:57.686Z",
+          "columnId": "cmwrq4rzicgzex",
+          "url": "https://www.youtube.com/watch?v=e8PQZ5kSMeo",
+          "provider": "youtube",
+          "vid": "e8PQZ5kSMeo",
+          "vk": null,
+          "title": "Новая система создания деревьев и травы в Unreal Engine 5.8 - Уроки для новичков",
+          "thumb": "https://i.ytimg.com/vi/e8PQZ5kSMeo/hqdefault.jpg",
           "tags": [],
           "note": ""
         }
