@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-23T06:23:09.884Z",
+  "updatedAt": "2026-11-23T06:35:47.522Z",
   "boards": [
     {
       "id": "b-main",
@@ -3108,6 +3108,19 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "A Frame’s Life: Frame Timing, Synchronization, and Latency in UE | Unreal Fest Chicago 2026",
           "thumb": "https://i.ytimg.com/vi/dKSHw_8vz3I/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        },
+        {
+          "id": "tmwsw6h1e0965r",
+          "addedAt": "2026-11-23T06:35:47.522Z",
+          "columnId": "cmwrr58y42zaij",
+          "url": "https://www.youtube.com/watch?v=WZhDr5Ktf9c&list=WL&index=31&t=6s&pp=iAQB0gcJCQ4IAYcqIYzvsAgC",
+          "provider": "youtube",
+          "vid": "WZhDr5Ktf9c",
+          "vk": null,
+          "title": "MetaHumans in Blender: Using OpenRigLogic to Customize DNA's Behavior | Inside Unreal",
+          "thumb": "https://i.ytimg.com/vi/WZhDr5Ktf9c/hqdefault.jpg",
           "tags": [],
           "note": ""
         }
