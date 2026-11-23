@@ -142,6 +142,7 @@
     user: null,
     persisting: false,
     renderedIds: [],
+    gridCards: [],
     selecting: false,
     selected: [],
     playerList: [],
@@ -199,6 +200,23 @@
 
   // ---------- фильтрация и сортировка ----------
 
+  // Единый порядок для сетки и для колонок канбана.
+  function compareTiles(a, b) {
+    if (state.sort === 'title') return String(a.title || '').localeCompare(String(b.title || ''), 'ru');
+    // числовое сравнение времени (Date.parse) — устойчиво к любым форматам дат
+    var da = Date.parse(a.addedAt || '') || 0;
+    var db = Date.parse(b.addedAt || '') || 0;
+    return state.sort === 'old' ? (da - db) : (db - da);
+  }
+
+  // Плитки колонки канбана в том порядке, который выбран в сортировке
+  // («Сначала новые» — новые сверху). «Вручную» — как лежат в данных.
+  function displayTiles(board, colId) {
+    var list = tilesOf(board, colId);
+    if (state.sort === 'manual') return list;
+    return list.slice().sort(compareTiles);
+  }
+
   function filteredTiles() {
     var q = state.q.trim().toLowerCase();
     var list = allTiles().filter(function (e) {
@@ -214,13 +232,10 @@
       }
       return true;
     });
-    list.sort(function (a, b) {
-      if (state.sort === 'title') return String(a.tile.title || '').localeCompare(String(b.tile.title || ''), 'ru');
-      // числовое сравнение времени (Date.parse) — устойчиво к любым форматам дат
-      var da = Date.parse(a.tile.addedAt || '') || 0;
-      var db2 = Date.parse(b.tile.addedAt || '') || 0;
-      return state.sort === 'old' ? (da - db2) : (db2 - da);
-    });
+    // «Вручную» — не сортируем: порядок как в данных (задаётся перетаскиванием в канбане)
+    if (state.sort !== 'manual') {
+      list.sort(function (a, b) { return compareTiles(a.tile, b.tile); });
+    }
     return list;
   }
 
@@ -375,11 +390,70 @@
 
   // ---------- рендер: галерея ----------
 
+  // Раскладка колонок: карточки берутся по порядку списка (он уже отсортирован) и
+  // каждая кладётся в самую короткую колонку — ряды заполняются слева направо,
+  // самые новые оказываются сверху. CSS columns так не умеют: они заполняют
+  // первую колонку сверху вниз и только потом переходят ко второй.
+  var masonryCols = 0; // число колонок текущей раскладки
+
+  function masonryMetrics() {
+    var cs = getComputedStyle($('#gallery'));
+    return {
+      min: parseFloat(cs.getPropertyValue('--col-min')) || 240,
+      gap: parseFloat(cs.getPropertyValue('--gap')) || 14,
+      width: $('#gallery').clientWidth
+    };
+  }
+
+  function gridColumnCount() {
+    var m = masonryMetrics();
+    return Math.max(1, Math.floor((m.width + m.gap) / (m.min + m.gap)));
+  }
+
+  function layoutMasonry(cards) {
+    var grid = $('#gallery');
+    var n = gridColumnCount();
+    masonryCols = n;
+    var gap = masonryMetrics().gap;
+
+    grid.innerHTML = '';
+    var cols = [];
+    for (var c = 0; c < n; c++) {
+      var col = document.createElement('div');
+      col.className = 'mcol';
+      grid.appendChild(col);
+      cols.push(col);
+    }
+
+    // 1) все карточки — в первую колонку и одним замером снимаем их реальную высоту
+    //    (превью имеют фиксированные пропорции, так что высота известна до загрузки картинок)
+    for (var k = 0; k < cards.length; k++) cols[0].appendChild(cards[k]);
+    var heights = [];
+    for (var h = 0; h < cards.length; h++) heights.push(cards[h].offsetHeight);
+
+    // 2) раздать по самым коротким колонкам, сохраняя порядок списка
+    var used = [];
+    for (var u = 0; u < n; u++) used.push(0);
+    for (var i = 0; i < cards.length; i++) {
+      var best = 0;
+      for (var j = 1; j < n; j++) if (used[j] < used[best]) best = j;
+      cols[best].appendChild(cards[i]);
+      used[best] += heights[i] + gap;
+    }
+  }
+
   function renderGallery() {
     var list = filteredTiles();
     state.renderedIds = list.map(function (e) { return e.tile.id; });
     var grid = $('#gallery');
-    grid.innerHTML = list.map(cardHTML).join('');
+    var cards = [];
+    if (list.length) {
+      var tmp = document.createElement('div');
+      tmp.innerHTML = list.map(cardHTML).join('');
+      cards = $all('.card', tmp);
+    }
+    state.gridCards = cards;
+    layoutMasonry(cards);
     // пустое состояние актуально только для вида «Сетка»
     var empty = $('#empty');
     if (state.view === 'grid' && !list.length) {
@@ -521,7 +595,7 @@
   }
 
   function columnHTML(b, c, edit) {
-    var tiles = tilesOf(b, c.id);
+    var tiles = displayTiles(b, c.id);
     var cCol = monoColor(c.color);
     var style = '--c:' + esc(cCol) + ';--c-bg:' + hexToRgba(cCol, 0.14) + ';';
     var html = '<section class="kb-col" data-col="' + esc(c.id) + '" style="' + style + '">' +
@@ -870,23 +944,27 @@
     var col = list.closest('.kb-col');
     var colId = col ? col.getAttribute('data-col') : null;
 
-    // вычислить позицию вставки по вертикали курсора
+    // позиция вставки по вертикали курсора имеет смысл только в ручном порядке;
+    // при сортировке по дате/названию место в колонке определяет ключ сортировки
+    var manual = state.sort === 'manual';
     var cards = $all('.kb-card', list).filter(function (c) { return !c.classList.contains('dragging'); });
     var index = cards.length;
-    for (var i = 0; i < cards.length; i++) {
-      var r = cards[i].getBoundingClientRect();
-      if (e.clientY < r.top + r.height / 2) { index = i; break; }
-    }
+    if (manual) {
+      for (var i = 0; i < cards.length; i++) {
+        var r = cards[i].getBoundingClientRect();
+        if (e.clientY < r.top + r.height / 2) { index = i; break; }
+      }
 
-    // вставить индикатор
-    var ind = document.createElement('div');
-    ind.className = 'drop-indicator';
-    if (index < cards.length) list.insertBefore(ind, cards[index]);
-    else list.appendChild(ind);
-    // индикатор не должен попадать после кнопки «+ видео»
-    var addBtn = list.querySelector('.kb-add-card');
-    if (addBtn && ind.previousElementSibling === addBtn) {
-      list.insertBefore(ind, addBtn);
+      // вставить индикатор
+      var ind = document.createElement('div');
+      ind.className = 'drop-indicator';
+      if (index < cards.length) list.insertBefore(ind, cards[index]);
+      else list.appendChild(ind);
+      // индикатор не должен попадать после кнопки «+ видео»
+      var addBtn = list.querySelector('.kb-add-card');
+      if (addBtn && ind.previousElementSibling === addBtn) {
+        list.insertBefore(ind, addBtn);
+      }
     }
 
     dnd.colId = colId;
@@ -912,31 +990,39 @@
     dnd.tileId = null; dnd.colId = null; dnd.index = -1;
   }
 
+  // Перенос плитки в колонку colId на позицию index отображаемого порядка этой колонки.
   function moveTile(tileId, colId, index) {
     var found = findTile(tileId);
     if (!found) return;
     var b = found.board;
     var t = found.tile;
-    if (t.columnId === colId) {
-      // проверим, меняется ли позиция внутри колонки
-      var cur = tilesOf(b, colId).map(function (x) { return x.id; });
-      if (cur[Math.min(index, cur.length - 1)] === tileId || cur.indexOf(tileId) === index) {
-        renderKanban();
-        return;
-      }
-    }
     var tiles = b.tiles || [];
     var i = tiles.indexOf(t);
+    var fromCol = t.columnId;
+
+    // отображаемый порядок исходной колонки — чтобы не делать пустой коммит, если ничего не изменилось
+    var before = displayTiles(b, fromCol).map(function (x) { return x.id; }).join(',');
+    // соседи по отображаемому порядку целевой колонки (без переносимой плитки)
+    var shown = displayTiles(b, colId).filter(function (x) { return x.id !== tileId; });
+
     if (i >= 0) tiles.splice(i, 1);
     t.columnId = colId;
-    var idx = 0, insertAt = tiles.length;
-    for (var k = 0; k < tiles.length; k++) {
-      if (tiles[k].columnId === colId) {
-        if (idx === index) { insertAt = k; break; }
-        idx++;
-      }
-    }
+    // в данных плитка ложится рядом с соседом из отображаемого порядка
+    var insertAt;
+    var next = shown[index], prev = shown[index - 1];
+    if (next) insertAt = tiles.indexOf(next);
+    else if (prev) insertAt = tiles.indexOf(prev) + 1;
+    else insertAt = tiles.length;
     tiles.splice(insertAt, 0, t);
+
+    if (fromCol === colId && displayTiles(b, colId).map(function (x) { return x.id; }).join(',') === before) {
+      // позиция не изменилась — возвращаем плитку на прежнее место и ничего не коммитим
+      tiles.splice(tiles.indexOf(t), 1);
+      tiles.splice(Math.min(i, tiles.length), 0, t);
+      renderKanban();
+      return;
+    }
+
     var col = columnOf(b, colId);
     var label = 'доска «' + b.name + '»: «' + (t.title || 'без названия') + '» → ' + (col ? col.name : colId);
     persist(label).then(function (ok) {
@@ -1577,6 +1663,17 @@
     // вид
     $('#view-grid').addEventListener('click', function () { setView('grid'); });
     $('#view-kanban').addEventListener('click', function () { setView('kanban'); });
+
+    // при изменении ширины окна число колонок меняется — переразложить существующие карточки
+    // (ResizeObserver надёжнее: resize-событие доходит не во всех вьюпортах)
+    var relayoutIfColsChanged = debounce(function () {
+      if (state.view !== 'grid' || !state.gridCards.length) return;
+      if (gridColumnCount() !== masonryCols) layoutMasonry(state.gridCards);
+    }, 120);
+    window.addEventListener('resize', relayoutIfColsChanged);
+    if (typeof ResizeObserver !== 'undefined') {
+      new ResizeObserver(relayoutIfColsChanged).observe($('#gallery'));
+    }
 
     // прочие кнопки шапки
     $('#refresh-btn').addEventListener('click', onRefresh);

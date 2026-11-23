@@ -395,12 +395,28 @@ main {
   padding: 18px 20px 40px;
 }
 
-.grid { columns: 240px; column-gap: 14px; }
+/* Колонки раскладывает app.js (layoutMasonry): карточки идут слева направо по рядам
+   в порядке сортировки. CSS columns для этого не годятся — они заполняют первую
+   колонку сверху вниз и только потом переходят ко второй. */
+.grid {
+  --col-min: 240px;
+  --gap: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--gap);
+}
+
+.mcol {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
 
 .card {
-  break-inside: avoid;
   width: 100%;
-  margin: 0 0 14px;
+  margin: 0;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 12px;
@@ -417,17 +433,19 @@ main {
   position: relative;
   background: var(--surface-2);
   overflow: hidden;
+  /* фиксированные пропорции превью: высота карточки известна до загрузки картинки,
+     поэтому раскладка не «прыгает» и порядок рядов сохраняется */
+  aspect-ratio: 16 / 9;
 }
 
 .card-thumb {
   display: block;
   width: 100%;
-  height: auto;
-  min-height: 60px;
+  height: 100%;
+  object-fit: cover;
 }
 
 .card-thumb-wrap.ph {
-  aspect-ratio: 16 / 9;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1271,7 +1289,6 @@ body.selecting .kb-card-menu { display: none; }
 
 @media (max-width: 560px) {
   .brand-name { display: none; }
-  .grid { columns: 160px; column-gap: 10px; }
-  .card { margin-bottom: 10px; }
+  .grid { --col-min: 160px; --gap: 10px; }
   .kb-col { width: 240px; }
 }
