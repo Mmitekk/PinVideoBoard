@@ -489,7 +489,7 @@ main {
 
 .card-chip-duration {
   position: absolute;
-  right: 8px;
+  left: 8px;
   bottom: 8px;
   padding: 2px 7px;
   border-radius: 6px;
