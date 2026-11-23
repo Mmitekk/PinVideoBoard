@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-23T06:47:57.686Z",
+  "updatedAt": "2026-11-23T06:49:20.491Z",
   "boards": [
     {
       "id": "b-main",
@@ -270,6 +270,19 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Новая система создания деревьев и травы в Unreal Engine 5.8 - Уроки для новичков",
           "thumb": "https://i.ytimg.com/vi/e8PQZ5kSMeo/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        },
+        {
+          "id": "tmwswnwbvqy8jv",
+          "addedAt": "2026-11-23T06:49:20.491Z",
+          "columnId": "cmwrq4rzicgzex",
+          "url": "https://www.youtube.com/watch?v=QJwTTmNez3k",
+          "provider": "youtube",
+          "vid": "QJwTTmNez3k",
+          "vk": null,
+          "title": "Introducing Mesh Terrain: Craft Large Complex Worlds | Unreal Fest Chicago 2026",
+          "thumb": "https://i.ytimg.com/vi/QJwTTmNez3k/hqdefault.jpg",
           "tags": [],
           "note": ""
         }
