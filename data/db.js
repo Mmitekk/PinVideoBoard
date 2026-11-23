@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-23T12:52:53.656Z",
+  "updatedAt": "2026-11-23T13:47:59.596Z",
   "boards": [
     {
       "id": "b-main",
@@ -35,7 +35,8 @@ window.__PVB_DATA = {
           "title": "Foliage Optimization Done Right (UE 5.7)",
           "thumb": "https://i.ytimg.com/vi/QvE_EUuGFm4/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 3287
         }
       ]
     },
@@ -70,7 +71,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Vaulting & Climbing (Parkour) Part 1 - Unreal Engine 5 Tutorial",
           "thumb": "https://i.ytimg.com/vi/6hPArmWkKJQ/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1467,
           "tags": [
             "pinterest"
           ],
@@ -86,7 +87,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "How To Make The AI's Head Follow The Player In Unreal Engine 5 (Tutorial)",
           "thumb": "https://i.ytimg.com/vi/6-LHE1HOGC8/hqdefault.jpg",
-          "duration": 0,
+          "duration": 787,
           "tags": [
             "pinterest"
           ],
@@ -102,7 +103,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "EASY HP bar with Tick-Down Damage Effect in UNREAL Engine",
           "thumb": "https://i.ytimg.com/vi/nWFoJ_dei3I/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1275,
           "tags": [
             "pinterest"
           ],
@@ -118,7 +119,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "How To Have Random Idle Animations In Unreal Engine 5",
           "thumb": "https://i.ytimg.com/vi/vDL-TuJGZMI/hqdefault.jpg",
-          "duration": 0,
+          "duration": 395,
           "tags": [
             "pinterest"
           ],
@@ -134,7 +135,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Free Text to Animation with only 8GB VRAM in ComfyUI",
           "thumb": "https://i.ytimg.com/vi/nDlMBCO8Np8/hqdefault.jpg",
-          "duration": 0,
+          "duration": 731,
           "tags": [
             "pinterest"
           ],
@@ -150,7 +151,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "How to Make a Combat System in UE5",
           "thumb": "https://i.ytimg.com/vi/4omEu9N9WIE/hqdefault.jpg",
-          "duration": 0,
+          "duration": 13757,
           "tags": [
             "pinterest"
           ],
@@ -166,7 +167,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Оптимизация Animation Blueprint (UE 5)",
           "thumb": "https://i.ytimg.com/vi/Cn4vza6-jfo/hqdefault.jpg",
-          "duration": 0,
+          "duration": 1013,
           "tags": [
             "pinterest"
           ],
@@ -182,7 +183,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Как сделать поворот головы и взгляд на игрока в Unreal Engine 5",
           "thumb": "https://i.ytimg.com/vi/8Kc5lvWRZ0A/hqdefault.jpg",
-          "duration": 0,
+          "duration": 476,
           "tags": [
             "pinterest"
           ],
@@ -198,7 +199,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Look at Target with Unreal Control Rig",
           "thumb": "https://i.ytimg.com/vi/dLcmsukj7ak/hqdefault.jpg",
-          "duration": 0,
+          "duration": 255,
           "tags": [
             "pinterest"
           ],
@@ -214,7 +215,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Поворот головы (NPC следит за игроком) (UE4, UE5)",
           "thumb": "https://i.ytimg.com/vi/75AzrSnjqXQ/hqdefault.jpg",
-          "duration": 0,
+          "duration": 816,
           "tags": [
             "pinterest"
           ],
@@ -232,7 +233,8 @@ window.__PVB_DATA = {
           "title": "YOU’RE SLEEPING on Unreal Engine’s Secret Asset!",
           "thumb": "https://i.ytimg.com/vi/fSzGqPRBvOQ/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 515
         },
         {
           "id": "tmws5n39u60cna",
@@ -245,7 +247,8 @@ window.__PVB_DATA = {
           "title": "Создание ГЛАВНОГО МЕНЮ. Часть 4 - Опции игры | Уроки Unreal Engine",
           "thumb": "https://i.ytimg.com/vi/xmLZGSDNePQ/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 1281
         },
         {
           "id": "tmwswifkxqt2pn",
@@ -258,7 +261,8 @@ window.__PVB_DATA = {
           "title": "A Practical Look at Mesh Terrain | Inside Unreal",
           "thumb": "https://i.ytimg.com/vi/XlbWtoIk-Zc/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 7950
         },
         {
           "id": "tmwswm4fqkl4ui",
@@ -271,7 +275,8 @@ window.__PVB_DATA = {
           "title": "Новая система создания деревьев и травы в Unreal Engine 5.8 - Уроки для новичков",
           "thumb": "https://i.ytimg.com/vi/e8PQZ5kSMeo/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 1654
         },
         {
           "id": "tmwswnwbvqy8jv",
@@ -284,7 +289,8 @@ window.__PVB_DATA = {
           "title": "Introducing Mesh Terrain: Craft Large Complex Worlds | Unreal Fest Chicago 2026",
           "thumb": "https://i.ytimg.com/vi/QJwTTmNez3k/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 2860
         },
         {
           "id": "tmwsww215rgdvp",
@@ -297,7 +303,8 @@ window.__PVB_DATA = {
           "title": "Делаем траву, которая реагирует на персонажа в Unreal Engine 5",
           "thumb": "https://i.ytimg.com/vi/eT-G2CB_kUA/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 656
         },
         {
           "id": "tmwsx5s7bk2rff",
@@ -310,7 +317,8 @@ window.__PVB_DATA = {
           "title": "You Can Now Generate Animations for FREE in Unreal Engine 5.9!",
           "thumb": "https://i.ytimg.com/vi/-GrOEHiu4iI/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 646
         }
       ]
     },
@@ -345,7 +353,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Live Unreal Engine Support // Question Time Livestream",
           "thumb": "https://i.ytimg.com/vi/bMRwQUJmpc8/hqdefault.jpg",
-          "duration": 0,
+          "duration": 4842,
           "tags": [
             "pinterest"
           ],
@@ -361,7 +369,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Live Unreal Engine Support & Q&A",
           "thumb": "https://i.ytimg.com/vi/URKlyhlMb1U/hqdefault.jpg",
-          "duration": 0,
+          "duration": 4781,
           "tags": [
             "pinterest"
           ],
@@ -377,7 +385,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Live Unreal Engine Support & Q&A",
           "thumb": "https://i.ytimg.com/vi/2IACVvv81XM/hqdefault.jpg",
-          "duration": 0,
+          "duration": 4659,
           "tags": [
             "pinterest"
           ],
@@ -393,7 +401,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Live Unreal Engine Support & Q&A",
           "thumb": "https://i.ytimg.com/vi/Euy5j3uoeLE/hqdefault.jpg",
-          "duration": 0,
+          "duration": 4630,
           "tags": [
             "pinterest"
           ],
@@ -409,7 +417,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Live Unreal Engine Support & Q&A",
           "thumb": "https://i.ytimg.com/vi/_qrvJ1FU4sU/hqdefault.jpg",
-          "duration": 0,
+          "duration": 4425,
           "tags": [
             "pinterest"
           ],
@@ -425,7 +433,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Unreal Engine 5 Tutorial -  Live Webinar: Blueprint Basics and Beyond",
           "thumb": "https://i.ytimg.com/vi/yKGtsD7oOPA/hqdefault.jpg",
-          "duration": 0,
+          "duration": 2840,
           "tags": [
             "pinterest"
           ],
@@ -441,7 +449,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Live Unreal Engine Support and Q&A",
           "thumb": "https://i.ytimg.com/vi/d4uWL9GC6tk/hqdefault.jpg",
-          "duration": 0,
+          "duration": 6755,
           "tags": [
             "pinterest"
           ],
@@ -457,7 +465,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Live Unreal Engine Support & Q&A",
           "thumb": "https://i.ytimg.com/vi/HTfT7znpXNs/hqdefault.jpg",
-          "duration": 0,
+          "duration": 4547,
           "tags": [
             "pinterest"
           ],
@@ -473,7 +481,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Live Unreal Engine Support & Q&A",
           "thumb": "https://i.ytimg.com/vi/FjZJHsU6CVs/hqdefault.jpg",
-          "duration": 0,
+          "duration": 3731,
           "tags": [
             "pinterest"
           ],
@@ -489,7 +497,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Answering Your Unreal Engine and Game Dev Questions Live",
           "thumb": "https://i.ytimg.com/vi/gYHbyrYl9So/hqdefault.jpg",
-          "duration": 0,
+          "duration": 4840,
           "tags": [
             "pinterest"
           ],
@@ -505,7 +513,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Answering Your Unreal Engine and Game Dev Questions Live",
           "thumb": "https://i.ytimg.com/vi/BekotjL0qWw/hqdefault.jpg",
-          "duration": 0,
+          "duration": 4628,
           "tags": [
             "pinterest"
           ],
@@ -521,7 +529,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Answering Your UE5 and Game Dev Questions",
           "thumb": "https://i.ytimg.com/vi/oyHOwiAGj0o/hqdefault.jpg",
-          "duration": 0,
+          "duration": 5134,
           "tags": [
             "pinterest"
           ],
@@ -553,7 +561,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Answering Your Unreal Engine 5 Questions",
           "thumb": "https://i.ytimg.com/vi/DSpvaP2v1AU/hqdefault.jpg",
-          "duration": 0,
+          "duration": 4383,
           "tags": [
             "pinterest"
           ],
@@ -569,7 +577,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Answering Your Unreal Engine 5 Questions",
           "thumb": "https://i.ytimg.com/vi/oHAjeMpGH8U/hqdefault.jpg",
-          "duration": 0,
+          "duration": 8777,
           "tags": [
             "pinterest"
           ],
@@ -601,7 +609,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Answering Your Unreal Engine 5 Questions",
           "thumb": "https://i.ytimg.com/vi/Qj-N8nPVJ8U/hqdefault.jpg",
-          "duration": 0,
+          "duration": 7150,
           "tags": [
             "pinterest"
           ],
@@ -617,7 +625,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Answering Your Unreal Engine 5 Questions",
           "thumb": "https://i.ytimg.com/vi/GujIb_8HIA8/hqdefault.jpg",
-          "duration": 0,
+          "duration": 5912,
           "tags": [
             "pinterest"
           ],
@@ -633,7 +641,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Answering Your Unreal Engine 5 Questions Live!",
           "thumb": "https://i.ytimg.com/vi/vu2ZW37fjoI/hqdefault.jpg",
-          "duration": 0,
+          "duration": 3591,
           "tags": [
             "pinterest"
           ],
@@ -649,7 +657,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Answering Your Unreal Engine 5 Questions Live!",
           "thumb": "https://i.ytimg.com/vi/2vvEXyeooBY/hqdefault.jpg",
-          "duration": 0,
+          "duration": 3376,
           "tags": [
             "pinterest"
           ],
@@ -665,7 +673,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Answering Your Unreal Engine 5 Questions - Question Time #135",
           "thumb": "https://i.ytimg.com/vi/VI6hFY1WidQ/hqdefault.jpg",
-          "duration": 0,
+          "duration": 4525,
           "tags": [
             "pinterest"
           ],
@@ -681,7 +689,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Question Time #134",
           "thumb": "https://i.ytimg.com/vi/-mXSwES7fFU/hqdefault.jpg",
-          "duration": 0,
+          "duration": 4461,
           "tags": [
             "pinterest"
           ],
@@ -697,7 +705,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Answering Your Unreal Engine 5 Questions #141",
           "thumb": "https://i.ytimg.com/vi/QFrBSPvQvwU/hqdefault.jpg",
-          "duration": 0,
+          "duration": 4268,
           "tags": [
             "pinterest"
           ],
@@ -713,7 +721,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Answering your Unreal Engine 5 Questions #137",
           "thumb": "https://i.ytimg.com/vi/s7itQWHXK7c/hqdefault.jpg",
-          "duration": 0,
+          "duration": 5341,
           "tags": [
             "pinterest"
           ],
@@ -729,7 +737,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Answering Your Unreal Engine 5 Questions",
           "thumb": "https://i.ytimg.com/vi/d0lvhvrQQdI/hqdefault.jpg",
-          "duration": 0,
+          "duration": 4158,
           "tags": [
             "pinterest"
           ],
@@ -745,7 +753,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Question Time #131",
           "thumb": "https://i.ytimg.com/vi/gZ3ljL6oYJs/hqdefault.jpg",
-          "duration": 0,
+          "duration": 5021,
           "tags": [
             "pinterest"
           ],
@@ -761,7 +769,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Question Time #130",
           "thumb": "https://i.ytimg.com/vi/HvcOLSDfhEo/hqdefault.jpg",
-          "duration": 0,
+          "duration": 4254,
           "tags": [
             "pinterest"
           ],
@@ -777,7 +785,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Question Time #127",
           "thumb": "https://i.ytimg.com/vi/O6tTr9C0_do/hqdefault.jpg",
-          "duration": 0,
+          "duration": 3765,
           "tags": [
             "pinterest"
           ],
@@ -793,7 +801,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Unreal Engine 5 Live Class - Stealth AI: Stealing Items",
           "thumb": "https://i.ytimg.com/vi/2gQvNrFUVyQ/hqdefault.jpg",
-          "duration": 0,
+          "duration": 5915,
           "tags": [
             "pinterest"
           ],
@@ -809,7 +817,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Answering Your Unreal Engine 5 Questions #140",
           "thumb": "https://i.ytimg.com/vi/-bYhlPGHIYU/hqdefault.jpg",
-          "duration": 0,
+          "duration": 4590,
           "tags": [
             "pinterest"
           ],
@@ -825,7 +833,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Question Time #133 - Answering Your Unreal Engine 5 Questions",
           "thumb": "https://i.ytimg.com/vi/edUX5uO08oA/hqdefault.jpg",
-          "duration": 0,
+          "duration": 4609,
           "tags": [
             "pinterest"
           ],
@@ -841,7 +849,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Question Time #132 - Answering your Unreal and Game Dev Questions",
           "thumb": "https://i.ytimg.com/vi/WGz87eJbwFk/hqdefault.jpg",
-          "duration": 0,
+          "duration": 4453,
           "tags": [
             "pinterest"
           ],
@@ -857,7 +865,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Question Time #129",
           "thumb": "https://i.ytimg.com/vi/UyHUPJ9pJco/hqdefault.jpg",
-          "duration": 0,
+          "duration": 4116,
           "tags": [
             "pinterest"
           ],
@@ -889,7 +897,7 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Unreal Engine 5 Live Class - Level Design for Platformers",
           "thumb": "https://i.ytimg.com/vi/hKc4c-e82uw/hqdefault.jpg",
-          "duration": 0,
+          "duration": 4873,
           "tags": [
             "pinterest"
           ],
@@ -3367,7 +3375,8 @@ window.__PVB_DATA = {
           "title": "How to Use Unreal Engine’s New Landscape System - Mesh Terrain Tutorial",
           "thumb": "https://i.ytimg.com/vi/Lhj2LutYNjA/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 3978
         },
         {
           "id": "tmws9rimotdmni",
@@ -3380,7 +3389,8 @@ window.__PVB_DATA = {
           "title": "Never Have Texture Stretching Again in UE5 (World Aligned Texture)",
           "thumb": "https://i.ytimg.com/vi/nTdth8d3VRE/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 263
         },
         {
           "id": "tmwsvq8fwanaf7",
@@ -3393,7 +3403,8 @@ window.__PVB_DATA = {
           "title": "How To Make AI Follow a Spline in Unreal Engine 5 (Tutorial)",
           "thumb": "https://i.ytimg.com/vi/XZOnY9l_rXc/hqdefault.jpg",
           "tags": [],
-          "note": ""
+          "note": "",
+          "duration": 555
         }
       ]
     }
