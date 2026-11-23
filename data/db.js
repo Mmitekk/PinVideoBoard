@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-22T21:28:39.255Z",
+  "updatedAt": "2026-11-23T05:52:18.434Z",
   "boards": [
     {
       "id": "b-main",
@@ -3004,6 +3004,19 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Creating High-Fidelity Digital Humans on a Small Budget w/ MetaHuman | Indie Games Week 2026",
           "thumb": "https://i.ytimg.com/vi/Oig-vdPd9ak/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        },
+        {
+          "id": "tmwsumjuquwtgx",
+          "addedAt": "2026-11-23T05:52:18.434Z",
+          "columnId": "cmwrr58y42zaij",
+          "url": "https://www.youtube.com/watch?v=CYvLn-tYRag&list=WL&index=41&pp=iAQBsAgC",
+          "provider": "youtube",
+          "vid": "CYvLn-tYRag",
+          "vk": null,
+          "title": "Profiling with Pirates: Performance Plundered from a Real Game | Unreal Fest Chicago 2026",
+          "thumb": "https://i.ytimg.com/vi/CYvLn-tYRag/hqdefault.jpg",
           "tags": [],
           "note": ""
         }
