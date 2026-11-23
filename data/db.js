@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-23T06:21:01.713Z",
+  "updatedAt": "2026-11-23T06:23:09.884Z",
   "boards": [
     {
       "id": "b-main",
@@ -3171,6 +3171,19 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Never Have Texture Stretching Again in UE5 (World Aligned Texture)",
           "thumb": "https://i.ytimg.com/vi/nTdth8d3VRE/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        },
+        {
+          "id": "tmwsvq8fwanaf7",
+          "addedAt": "2026-11-23T06:23:09.884Z",
+          "columnId": "cmws5orkfqs9cd",
+          "url": "https://www.youtube.com/watch?v=XZOnY9l_rXc&list=WL&index=32&pp=iAQBsAgC",
+          "provider": "youtube",
+          "vid": "XZOnY9l_rXc",
+          "vk": null,
+          "title": "How To Make AI Follow a Spline in Unreal Engine 5 (Tutorial)",
+          "thumb": "https://i.ytimg.com/vi/XZOnY9l_rXc/hqdefault.jpg",
           "tags": [],
           "note": ""
         }
