@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-23T06:49:20.491Z",
+  "updatedAt": "2026-11-23T06:55:41.130Z",
   "boards": [
     {
       "id": "b-main",
@@ -283,6 +283,19 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Introducing Mesh Terrain: Craft Large Complex Worlds | Unreal Fest Chicago 2026",
           "thumb": "https://i.ytimg.com/vi/QJwTTmNez3k/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        },
+        {
+          "id": "tmwsww215rgdvp",
+          "addedAt": "2026-11-23T06:55:41.129Z",
+          "columnId": "cmwrq4rzicgzex",
+          "url": "https://www.youtube.com/watch?v=eT-G2CB_kUA",
+          "provider": "youtube",
+          "vid": "eT-G2CB_kUA",
+          "vk": null,
+          "title": "Делаем траву, которая реагирует на персонажа в Unreal Engine 5",
+          "thumb": "https://i.ytimg.com/vi/eT-G2CB_kUA/hqdefault.jpg",
           "tags": [],
           "note": ""
         }
