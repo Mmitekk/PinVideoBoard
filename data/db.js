@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-23T07:14:53.411Z",
+  "updatedAt": "2026-11-23T07:16:22.649Z",
   "boards": [
     {
       "id": "b-main",
@@ -3238,6 +3238,19 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Beyond Native: Real-Time Scientific & Cable Simulation in UE5 | Unreal Fest Chicago 2026",
           "thumb": "https://i.ytimg.com/vi/ngx2Cy5tkXo/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        },
+        {
+          "id": "tmwsxmnzton1tq",
+          "addedAt": "2026-11-23T07:16:22.649Z",
+          "columnId": "cmwrr58y42zaij",
+          "url": "https://www.youtube.com/watch?v=k0tgmrBuIJc&list=WL&index=19&pp=iAQBsAgC",
+          "provider": "youtube",
+          "vid": "k0tgmrBuIJc",
+          "vk": null,
+          "title": "Getting Started with MCP in Unreal Engine 5.8 I Epic Games Education Webinar",
+          "thumb": "https://i.ytimg.com/vi/k0tgmrBuIJc/hqdefault.jpg",
           "tags": [],
           "note": ""
         }
