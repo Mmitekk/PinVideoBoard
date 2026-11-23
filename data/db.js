@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-23T07:07:23.162Z",
+  "updatedAt": "2026-11-23T07:09:32.387Z",
   "boards": [
     {
       "id": "b-main",
@@ -3199,6 +3199,19 @@ window.__PVB_DATA = {
           "vk": null,
           "title": "Scaling AI the Smart Way: Memory Footprint and Runtime Efficiency | Unreal Fest Chicago 2026",
           "thumb": "https://i.ytimg.com/vi/BFfebAtBLfU/hqdefault.jpg",
+          "tags": [],
+          "note": ""
+        },
+        {
+          "id": "tmwsxdvfnt7xc0",
+          "addedAt": "2026-11-23T07:09:32.387Z",
+          "columnId": "cmwrr58y42zaij",
+          "url": "https://www.youtube.com/watch?v=v6QujSBg4Xw&list=WL&index=23&pp=iAQB0gcJCQ4IAYcqIYzvsAgC",
+          "provider": "youtube",
+          "vid": "v6QujSBg4Xw",
+          "vk": null,
+          "title": "World Modeling and Vibe Simulation with Unreal Engine | Unreal Fest Chicago 2026",
+          "thumb": "https://i.ytimg.com/vi/v6QujSBg4Xw/hqdefault.jpg",
           "tags": [],
           "note": ""
         }
