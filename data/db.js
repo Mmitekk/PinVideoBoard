@@ -1,6 +1,6 @@
 window.__PVB_DATA = {
   "version": 1,
-  "updatedAt": "2026-11-24T07:46:20.482Z",
+  "updatedAt": "2026-11-24T21:35:18.542Z",
   "boards": [
     {
       "id": "b-main",
@@ -3389,6 +3389,20 @@ window.__PVB_DATA = {
           "tags": [],
           "note": "",
           "duration": 2176
+        },
+        {
+          "id": "tmwv7r40do3ln0",
+          "addedAt": "2026-11-24T21:35:18.541Z",
+          "columnId": "cmwrr58y42zaij",
+          "url": "https://www.youtube.com/watch?v=zd7DCFBLCcc",
+          "provider": "youtube",
+          "vid": "zd7DCFBLCcc",
+          "vk": null,
+          "title": "https://www.youtube.com/watch?v=zd7DCFBLCcc",
+          "thumb": "https://i.ytimg.com/vi/zd7DCFBLCcc/maxresdefault.jpg",
+          "duration": 8791,
+          "tags": [],
+          "note": ""
         }
       ]
     },
