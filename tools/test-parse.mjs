@@ -76,5 +76,19 @@ const emb = V.embedUrl({ provider: 'youtube', vid: 'aqz-KE-bpKQ' });
 if (emb !== 'https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ?autoplay=1&rel=0&modestbranding=1') { failed++; console.log('FAIL embedUrl youtube:', emb); }
 else console.log('ok   embedUrl youtube');
 
+// fmtDuration
+if (V.fmtDuration(0) !== '') { failed++; console.log('FAIL fmtDuration 0'); }
+else if (V.fmtDuration(65) !== '1:05') { failed++; console.log('FAIL fmtDuration 65'); }
+else if (V.fmtDuration(4821) !== '1:20:21') { failed++; console.log('FAIL fmtDuration 4821'); }
+else console.log('ok   fmtDuration');
+
+// parseDuration
+if (V.parseDuration('12:34') !== 754) { failed++; console.log('FAIL parseDuration 12:34'); }
+else if (V.parseDuration('1:20:21') !== 4821) { failed++; console.log('FAIL parseDuration 1:20:21'); }
+else if (V.parseDuration('4821') !== 4821) { failed++; console.log('FAIL parseDuration 4821'); }
+else if (V.parseDuration('PT1H20M21S') !== 4821) { failed++; console.log('FAIL parseDuration PT1H20M21S'); }
+else if (V.parseDuration('') !== 0) { failed++; console.log('FAIL parseDuration empty'); }
+else console.log('ok   parseDuration');
+
 if (failed) { console.log(`\n${failed} FAIL`); process.exit(1); }
 console.log('\nвсе проверки пройдены');

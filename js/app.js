@@ -617,9 +617,14 @@
   function kbCardHTML(b, c, t, edit) {
     var thumbs = V.thumbFallbacks(t);
     var dur = V.fmtDuration(t.duration);
+    var durHTML = dur ? '<span class="card-chip-duration">' + esc(dur) + '</span>' : '';
     var thumbHTML = thumbs.length
-      ? '<img class="kb-card-thumb" src="' + esc(thumbs[0]) + '" alt="" loading="lazy" data-fb="' + esc(thumbs.slice(1).join('|')) + '">'
-      : '<div class="kb-card-ph">▶</div>';
+      ? '<div class="kb-card-thumb-wrap"><img class="kb-card-thumb" src="' + esc(thumbs[0]) + '" alt="" loading="lazy" data-fb="' + esc(thumbs.slice(1).join('|')) + '">' +
+        '<span class="card-play"><span>▶</span></span>' +
+        durHTML + '</div>'
+      : '<div class="kb-card-thumb-wrap ph"><div class="kb-card-ph">▶</div>' +
+        '<span class="card-play"><span>▶</span></span>' +
+        durHTML + '</div>';
     var isSelected = edit && state.selecting && state.selected.indexOf(t.id) >= 0;
     return '<article class="kb-card' + (isSelected ? ' selected' : '') + '" data-id="' + esc(t.id) + '"' + (edit && !state.selecting ? ' draggable="true"' : '') + '>' +
       thumbHTML +
@@ -629,7 +634,6 @@
       '<h4 class="kb-card-title">' + esc(t.title || 'Без названия') + '</h4>' +
       '<div class="kb-card-meta">' +
       '<span>' + esc(V.providerLabel(t.provider)) + '</span>' +
-      (dur ? '<span>·</span><span>' + esc(dur) + '</span>' : '') +
       '</div></div></article>';
   }
 
@@ -1199,11 +1203,12 @@
       editorCtx.columnId = t.columnId;
       $('#tile-url').value = t.url || '';
       $('#tile-title').value = t.title || '';
+      $('#tile-duration').value = t.duration ? V.fmtDuration(t.duration) : '';
       $('#tile-tags').value = (t.tags || []).join(', ');
       $('#tile-note').value = t.note || '';
       boardSel.value = found.board.id;
       fillColumnSelect(found.board.id, t.columnId);
-      var info = { provider: t.provider, vid: t.vid, vk: t.vk, url: t.url };
+      var info = { provider: t.provider, vid: t.vid, vk: t.vk, url: t.url, duration: t.duration || 0 };
       showTilePreview(info, t.thumb, t.title);
       $('#tile-resolve-status').hidden = true;
     } else {
@@ -1213,6 +1218,7 @@
       editorCtx.columnId = (preset && preset.columnId) || (tilesOfOrder(findBoard(bId))[0] ? findBoard(bId).columns[0].id : null);
       $('#tile-url').value = '';
       $('#tile-title').value = '';
+      $('#tile-duration').value = '';
       $('#tile-tags').value = '';
       $('#tile-note').value = '';
       boardSel.value = bId;
@@ -1265,6 +1271,19 @@
       img.removeAttribute('src');
       img.hidden = true;
     }
+    var prevDur = $('#tile-preview-duration');
+    if (prevDur) {
+      var d = (info && typeof info.duration === 'number' && info.duration > 0)
+        ? info.duration
+        : ($('#tile-duration') ? V.parseDuration($('#tile-duration').value) : 0);
+      var fmt = V.fmtDuration(d);
+      if (fmt) {
+        prevDur.textContent = fmt;
+        prevDur.hidden = false;
+      } else {
+        prevDur.hidden = true;
+      }
+    }
     prev.hidden = false;
   }
 
@@ -1291,6 +1310,9 @@
       btn.disabled = false;
       btn.textContent = 'Определить';
       state.resolveMeta = meta;
+      if (meta && meta.duration) {
+        $('#tile-duration').value = V.fmtDuration(meta.duration);
+      }
       showTilePreview(meta, meta.thumb, meta.title);
       var known = !!meta.title;
       if (known) {
@@ -1349,7 +1371,9 @@
     t.vk = parsed.vk || null;
     t.title = $('#tile-title').value.trim() || (meta && meta.title) || 'Без названия';
     t.thumb = (meta && meta.thumb) || t.thumb || null;
-    if (meta && meta.duration) t.duration = meta.duration;
+    var durInput = $('#tile-duration') ? $('#tile-duration').value.trim() : '';
+    var dur = durInput ? V.parseDuration(durInput) : ((meta && meta.duration) || 0);
+    t.duration = dur > 0 ? dur : 0;
     t.tags = tags;
     t.note = $('#tile-note').value.trim();
 
@@ -1753,6 +1777,19 @@
     });
     $('#tile-url').addEventListener('keydown', function (e) {
       if (e.key === 'Enter') { e.preventDefault(); onTileResolve(); }
+    });
+    $('#tile-duration').addEventListener('input', function () {
+      var d = V.parseDuration(this.value);
+      var prevDur = $('#tile-preview-duration');
+      if (prevDur) {
+        var fmt = V.fmtDuration(d);
+        if (fmt) {
+          prevDur.textContent = fmt;
+          prevDur.hidden = false;
+        } else {
+          prevDur.hidden = true;
+        }
+      }
     });
 
     // редактор колонки

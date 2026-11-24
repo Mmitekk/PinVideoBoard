@@ -121,6 +121,15 @@
       });
   }
 
+  function tryDevDuration(vid) {
+    if (typeof window === 'undefined' || !window.location) return Promise.resolve(0);
+    var h = window.location.hostname;
+    if (h !== '127.0.0.1' && h !== 'localhost') return Promise.resolve(0);
+    return fetchJSON('/api/dev-duration?vid=' + encodeURIComponent(vid), 4000)
+      .then(function (r) { return (r && r.duration) ? Number(r.duration) : 0; })
+      .catch(function () { return 0; });
+  }
+
   // название YouTube без API-ключа: скрытый плеер IFrame API, getVideoData().title
   var ytApiLoading = false;
   function ensureYtApi(cb) {
@@ -159,6 +168,7 @@
         var player = null;
         function cleanup() {
           try { if (player && player.destroy) player.destroy(); } catch (e) { /* ignore */ }
+          try { if (host && host.parentNode) host.parentNode.removeChild(host); } catch (e) { /* ignore */ }
         }
         try {
           player = new YT.Player(host, {
@@ -166,17 +176,31 @@
             playerVars: { disablekb: 1, mute: 1, autoplay: 0 },
             events: {
               onReady: function () {
-                try {
-                  var d = player.getVideoData();
-                  var dur = 0;
-                  try { dur = Math.round(player.getDuration() || 0); } catch (e) { /* ignore */ }
-                  finish(d && d.title ? { title: d.title, duration: dur, source: 'yt-api' } : null);
-                } catch (e) { finish(null); }
+                var checkCount = 0;
+                function check() {
+                  try {
+                    var d = player.getVideoData ? player.getVideoData() : null;
+                    var dur = 0;
+                    try { dur = Math.round(player.getDuration() || 0); } catch (e) {}
+                    if (dur > 0 || checkCount >= 8) {
+                      cleanup();
+                      finish((d && d.title) || dur ? { title: d ? d.title : '', duration: dur, source: 'yt-api' } : null);
+                      return;
+                    }
+                  } catch (e) {
+                    cleanup();
+                    finish(null);
+                    return;
+                  }
+                  checkCount++;
+                  setTimeout(check, 250);
+                }
+                check();
               },
-              onError: function () { finish(null); }
+              onError: function () { cleanup(); finish(null); }
             }
           });
-        } catch (e) { finish(null); }
+        } catch (e) { cleanup(); finish(null); }
       });
     });
   }
@@ -195,6 +219,7 @@
       if (!meta.thumb && info.provider === 'youtube' && info.vid) {
         meta.thumb = 'https://i.ytimg.com/vi/' + info.vid + '/maxresdefault.jpg';
       }
+      if (typeof meta.duration !== 'number') meta.duration = 0;
       return meta;
     }
     function fallback() {
@@ -212,7 +237,24 @@
     } else {
       chain = noembedMeta(info);
     }
-    return chain.then(ok).catch(fallback);
+    return chain.then(ok).catch(fallback).then(function (meta) {
+      if (!meta) return null;
+      if (info.provider === 'youtube' && info.vid && (!meta.duration || meta.duration <= 0)) {
+        return tryDevDuration(info.vid).then(function (devDur) {
+          if (devDur > 0) {
+            meta.duration = devDur;
+            return meta;
+          }
+          return ytApiMeta(info).then(function (ytMeta) {
+            if (ytMeta && ytMeta.duration > 0) {
+              meta.duration = ytMeta.duration;
+            }
+            return meta;
+          }).catch(function () { return meta; });
+        });
+      }
+      return meta;
+    });
   }
 
   // ---------- превью и встраивание ----------
@@ -258,6 +300,31 @@
     return h ? h + ':' + p2(m) + ':' + p2(s) : m + ':' + p2(s);
   }
 
+  function parseDuration(val) {
+    if (typeof val === 'number') return Math.max(0, Math.round(val));
+    if (!val || typeof val !== 'string') return 0;
+    val = val.trim();
+    if (!val) return 0;
+    if (/^\d+$/.test(val)) return parseInt(val, 10);
+    var parts = val.split(':').map(function (p) { return p.trim(); });
+    if (parts.length === 2) {
+      var m = parseInt(parts[0], 10) || 0;
+      var s = parseInt(parts[1], 10) || 0;
+      return m * 60 + s;
+    }
+    if (parts.length === 3) {
+      var h = parseInt(parts[0], 10) || 0;
+      var m = parseInt(parts[1], 10) || 0;
+      var s = parseInt(parts[2], 10) || 0;
+      return h * 3600 + m * 60 + s;
+    }
+    var iso = val.match(/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/i);
+    if (iso && (iso[1] || iso[2] || iso[3])) {
+      return (parseInt(iso[1] || 0, 10) * 3600) + (parseInt(iso[2] || 0, 10) * 60) + parseInt(iso[3] || 0, 10);
+    }
+    return 0;
+  }
+
   window.__PVB_VIDEOS = {
     parse: parse,
     resolve: resolve,
@@ -265,6 +332,7 @@
     thumbFallbacks: thumbFallbacks,
     providerLabel: providerLabel,
     fmtDuration: fmtDuration,
+    parseDuration: parseDuration,
     canonicalUrl: canonicalUrl
   };
 })();

@@ -4,6 +4,7 @@
 // Запуск: node tools/dev-server.mjs  [порт можно переопределить: PVB_PORT=9000]
 import http from 'node:http';
 import { readFile, writeFile } from 'node:fs/promises';
+import { execFile } from 'node:child_process';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -12,6 +13,7 @@ const ROOT = path.resolve(__dirname, '..');
 const DATA_FILE = path.join(ROOT, 'data', 'db.js');
 const PORT = Number(process.env.PVB_PORT || 8940);
 const HOST = '127.0.0.1';
+const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36';
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
@@ -55,6 +57,30 @@ const server = http.createServer(async (req, res) => {
   if (url.pathname === '/api/ping' && req.method === 'GET') {
     res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
     res.end(JSON.stringify({ ok: true, v: 1, app: 'pinvideoboard-dev' }));
+    return;
+  }
+
+  if (url.pathname === '/api/dev-duration' && req.method === 'GET') {
+    const vid = url.searchParams.get('vid');
+    if (!vid || !/^[\w-]{6,16}$/.test(vid)) {
+      res.writeHead(400, { 'Content-Type': 'application/json; charset=utf-8' });
+      res.end(JSON.stringify({ ok: false, error: 'invalid vid' }));
+      return;
+    }
+    execFile('curl', ['-s', '--max-time', '12', '-A', UA, '-H', 'Accept-Language: en-US,en;q=0.9', 'https://www.youtube.com/watch?v=' + vid],
+      { timeout: 15000, maxBuffer: 8 * 1024 * 1024 },
+      (err, stdout) => {
+        if (err) {
+          res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+          res.end(JSON.stringify({ ok: true, vid, duration: 0 }));
+          return;
+        }
+        const m = String(stdout).match(/"lengthSeconds":"(\d+)"/);
+        const duration = m ? Number(m[1]) : 0;
+        res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+        res.end(JSON.stringify({ ok: true, vid, duration }));
+        console.log(`[dev-duration] vid=${vid} -> ${duration}s (${Math.floor(duration / 60)}:${(duration % 60).toString().padStart(2, '0')})`);
+      });
     return;
   }
 
